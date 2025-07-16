@@ -1,0 +1,127 @@
+.Kinuta-Shin-StdN-6K {
+  font-family: "kinuta-shin-stdn", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.palast-variable {
+  font-family: "palast-variable", sans-serif;
+  font-variation-settings: "opsz" 160, "wght" 500;
+}
+
+.palast-variable-italic {
+  font-family: "palast-variable", sans-serif;
+  font-variation-settings: "opsz" 160, "wght" 500;
+  font-style: italic;
+}
+
+.kiwi-maru-regular {
+  font-family: "kiwi-maru", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kinuta-maruminfuji-stdn {
+  font-family: kinuta-maruminfuji-stdn, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.KinutaShinStdN48K {
+  font-family: "kinuta-shin-stdn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.KinutaShinStdN6K {
+  font-family: "kinuta-shin-stdn", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Ryo-Gothic-PlusN-H {
+  font-family: "ryo-gothic-plusn", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.UDDigiKyokasho-Pro-R {
+  font-family: "uddigikyokasho-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Yu-Mincho-Pr6N-R {
+  font-family: "Yu Mincho", "YuMincho";
+  font-weight: 200;
+  font-style: normal;
+}
+
+.string-sss {
+  font-size: 10px;
+}
+
+.string-ss {
+  font-size: 15px;
+}
+.string-s {
+  font-size: 18px;
+}
+.string-sm {
+  font-size: 20px;
+}
+.string-m {
+  font-size: 25px;
+}
+.string-rg {
+  font-size: 30px;
+}
+.string-md {
+  font-size: 40px;
+}
+
+.string-lg {
+  font-size: 50px;
+}
+.string-big {
+  font-size: 70px;
+}
+
+@media (max-width: 1080px) {
+  .string-sss {
+    font-size: 8px;
+  }
+
+  .string-ss {
+    font-size: 13px;
+  }
+
+  .string-sm {
+    font-size: 18px;
+  }
+
+  .string-rg {
+    font-size: 22px;
+  }
+
+  .string-lg {
+    font-size: 35px;
+  }
+  .string-big {
+    font-size: 45px;
+  }
+}
+
+.mask-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+
+  mask-image: radial-gradient(circle at center, transparent 60px, black 61px);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    transparent 60px,
+    black 61px
+  );
+
+  transition: all 2s ease-in-out;
+}
