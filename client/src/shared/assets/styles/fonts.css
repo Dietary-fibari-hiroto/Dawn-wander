@@ -52,6 +52,11 @@
   font-weight: 200;
   font-style: normal;
 }
+.Ten-Mincho-Regular {
+  font-family: "ten-mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .string-sss {
   font-size: 10px;

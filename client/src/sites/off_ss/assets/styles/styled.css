@@ -1,0 +1,11 @@
+.off-horizontal-border {
+  display: inline;
+  height: 1px;
+  background-image: linear-gradient(to right, white 10px, transparent 10px);
+  background-size: 20px 1px; /* ← 10px dash + 10px space */
+  background-repeat: repeat-x;
+}
+
+.art-set {
+  opacity: 0.3;
+}
