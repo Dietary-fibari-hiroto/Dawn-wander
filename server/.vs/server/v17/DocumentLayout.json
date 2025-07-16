@@ -1,0 +1,27 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\",
+  "Documents": [],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7b7dd7dd-64c6-42b1-bd6f-2ee8e2aebd92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e21a0b2b-0c64-4724-8384-38f57753210c}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
