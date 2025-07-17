@@ -1,1 +1,10 @@
 export { default as OffHeader } from "./layout/OffHeader";
+export { default as LinkButton } from "./common/LinkButton";
+export { default as OffSectionTitle } from "./common/OffSectionTitle";
+export { default as OffMainText } from "./common/OffMainText";
+export { default as FaqTag } from "./common/FaqTag";
+export { default as OffFooter } from "./layout/OffFooter";
+export { default as CanDoCard } from "./common/CanDoCard";
+export { default as InductionCard } from "./common/InductionCard";
+export { default as TopSection } from "./common/TopSection";
+export { default as ContestCard } from "./common/ContestCard";

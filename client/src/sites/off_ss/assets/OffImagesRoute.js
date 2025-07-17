@@ -30,10 +30,12 @@ const OffImagesRoute = {
   pen: require("./images/pen.png"),
   phone: require("./images/phone.png"),
   phone_art: require("./images/phone_art.png"),
+  camera_art3: require("./images/camera_art3.png"),
   retoutch_img: require("./images/retoutch_img.png"),
   review: require("./images/review.png"),
   ss_logo: require("./images/ss_logo.png"),
   usericon: require("./images/usericon.png"),
+  offn: require("./images/offn.jpg"),
 };
 
 export default OffImagesRoute;

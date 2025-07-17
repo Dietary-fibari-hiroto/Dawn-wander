@@ -1,11 +1,26 @@
 .off-horizontal-border {
-  display: inline;
+  display: block;
   height: 1px;
   background-image: linear-gradient(to right, white 10px, transparent 10px);
-  background-size: 20px 1px; /* ← 10px dash + 10px space */
+  background-size: 20px 1px;
   background-repeat: repeat-x;
+}
+.off-vertical-border {
+  display: block;
+  width: 1px; /* ← 横線→縦線なので、横幅を1pxに */
+  height: 100%; /* 必要な高さに調整してね */
+  background-image: linear-gradient(
+    to bottom,
+    white 10px,
+    transparent 10px
+  ); /* ← 縦方向に変更 */
+  background-size: 1px 20px; /* ← dash: 10px + gap: 10px */
+  background-repeat: repeat-y;
 }
 
 .art-set {
   opacity: 0.3;
+}
+.vertical-text {
+  writing-mode: vertical-rl; /* 縦書き・右から左へ */
 }

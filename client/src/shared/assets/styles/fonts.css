@@ -87,6 +87,9 @@
 .string-big {
   font-size: 70px;
 }
+.string-hundred {
+  font-size: 100px;
+}
 
 @media (max-width: 1080px) {
   .string-sss {
