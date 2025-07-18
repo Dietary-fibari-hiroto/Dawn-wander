@@ -2,7 +2,7 @@ CREATE TABLE users(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     is_firsttime BOOLEAN NOT NULL DEFAULT TRUE,
     age INT NOT NULL,
-    gendaer_id INT NOT NULL,
+    gender_id INT NOT NULL,
     create_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 )ENGINE=InnoDB;
 
@@ -39,7 +39,7 @@ CREATE TABLE pages(
     id INT NOT NULL PRIMARY KEY,
     project_id INT NOT NULL,
     page_name VARCHAR(255) NOT NULL,
-    explain TEXT NULL,
+    explain_text TEXT NULL,
     FOREIGN KEY (project_id) REFERENCES projects(id)
 )ENGINE=InnoDB;
 
@@ -47,7 +47,7 @@ CREATE TABLE elements(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     page_id INT NOT NULL,
     element_name VARCHAR(255) NOT NULL,
-    explain TEXT NULL,
+    explain_text TEXT NULL,
     FOREIGN KEY (page_id) REFERENCES pages(id)
 )ENGINE=InnoDB;
 
@@ -57,10 +57,10 @@ CREATE TABLE pageviews(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     page_id INT NOT NULL,
     user_trial_id INT NOT NULL,
-    staing_time FLOAT NOT NULL DEFAULT 0
+    staing_time FLOAT NOT NULL DEFAULT 0,
     after_page INT NULL,
     FOREIGN KEY (page_id) REFERENCES pages(id),
-    FOREIGN KEY (user_trial_id) REFERENCES user_trials(id)
+    FOREIGN KEY (user_trial_id) REFERENCES user_trials(id),
     FOREIGN KEY (after_page) REFERENCES pages(id)
 )ENGINE=InnoDB;
 
@@ -69,7 +69,7 @@ CREATE TABLE clickevents(
     pageview_id INT NOT NULL,
     element_id INT NOT NULL,
     clicked_at DATETIME NULL,/*使うかわからんからNULL許容*/
-    FOREIGN KEY (pageview_id) REFERENCES pageviews(id)
+    FOREIGN KEY (pageview_id) REFERENCES pageviews(id),
     FOREIGN KEY (element_id) REFERENCES elements(id)    
 )ENGINE=InnoDB;
 
@@ -79,7 +79,7 @@ CREATE TABLE hover_events(
     pageview_id INT NOT NULL,
     element_id INT NOT NULL,
     duration_sec FLOAT NULL,/*使うかわからんからNULL許容*/
-    FOREIGN KEY (pageview_id) REFERENCES pageviews(id)
+    FOREIGN KEY (pageview_id) REFERENCES pageviews(id),
     FOREIGN KEY (element_id) REFERENCES elements(id)    
 )ENGINE=InnoDB;
 
@@ -107,7 +107,7 @@ CREATE TABLE surveys(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description TEXT NULL,
-    create_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    create_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 )ENGINE=InnoDB;
 
 CREATE TABLE questions(
