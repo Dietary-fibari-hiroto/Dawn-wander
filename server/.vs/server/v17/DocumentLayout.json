@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\questions\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\questions\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\taskresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\taskresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\scroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\scroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\hover_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\hover_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\clickevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\clickevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\user_trial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\user_trial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\surverys\\models\\pageview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\surverys\\models\\pageview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\projects\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\projects\\models\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\projects\\models\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\projects\\models\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\projects\\models\\element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\projects\\models\\element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\features\\users\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\features\\users\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|c:\\users\\2230372\\mydata\\yuzu_product\\dawn-wander\\server\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{286CA535-79E3-493D-9B15-C61857260130}|server\\server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +62,151 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Questions\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Questions\\Models\\Question.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Questions\\Models\\Question.cs",
+              "RelativeToolTip": "server\\Features\\Questions\\Models\\Question.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:34:35.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Taskresult.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Taskresult.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\Taskresult.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Taskresult.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\Taskresult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:31:12.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Scroll.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Scroll.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\Scroll.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Scroll.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\Scroll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:28:53.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hover_event.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Hover_event.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\Hover_event.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Hover_event.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\Hover_event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T05:23:13.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User_trial.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\User_trial.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\User_trial.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\User_trial.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\User_trial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:36:09.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Clickevent.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Clickevent.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\Clickevent.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Clickevent.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\Clickevent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:33:24.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Pageview.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Pageview.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Surverys\\Models\\Pageview.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Surverys\\Models\\Pageview.cs",
+              "RelativeToolTip": "server\\Features\\Surverys\\Models\\Pageview.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:25:15.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Element.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Element.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Projects\\Models\\Element.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Element.cs",
+              "RelativeToolTip": "server\\Features\\Projects\\Models\\Element.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:19:55.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Page.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Page.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Projects\\Models\\Page.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Page.cs",
+              "RelativeToolTip": "server\\Features\\Projects\\Models\\Page.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:13:39.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Operation.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Operation.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Projects\\Models\\Operation.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Projects\\Models\\Operation.cs",
+              "RelativeToolTip": "server\\Features\\Projects\\Models\\Operation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:07:55.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Users\\Models\\User.cs",
+              "RelativeDocumentMoniker": "server\\Features\\Users\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Features\\Users\\Models\\User.cs",
+              "RelativeToolTip": "server\\Features\\Users\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T04:07:29.229Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{7b7dd7dd-64c6-42b1-bd6f-2ee8e2aebd92}"
@@ -26,15 +217,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\appsettings.json",
+              "RelativeDocumentMoniker": "server\\appsettings.json",
+              "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\appsettings.json",
+              "RelativeToolTip": "server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-19T03:34:23.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Program.cs",
               "RelativeDocumentMoniker": "server\\Program.cs",
               "ToolTip": "C:\\Users\\2230372\\MyData\\Yuzu_Product\\dawn-wander\\server\\server\\Program.cs",
               "RelativeToolTip": "server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T14:01:41.185Z",
+              "WhenOpened": "2025-07-19T03:29:12.901Z",
               "EditorCaption": ""
             }
           ]
