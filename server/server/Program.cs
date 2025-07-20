@@ -2,6 +2,7 @@ using server.Data;
 using Microsoft.EntityFrameworkCore;
 using server.Features.Users.Repositories;
 using server.Features.Users.Services;
+using server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +13,9 @@ builder.Services.AddSwaggerGen();
 //DI“o˜^
 builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 38))));
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
+
 
 
 var app = builder.Build();
