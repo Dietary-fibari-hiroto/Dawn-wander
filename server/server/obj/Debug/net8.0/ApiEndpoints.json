@@ -18,6 +18,152 @@
     ]
   },
   {
+    "ContainingType": "server.Features.Surverys.ClickeventController",
+    "Method": "GetAll",
+    "RelativePath": "api/Clickevent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.ClickeventController",
+    "Method": "Create",
+    "RelativePath": "api/Clickevent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clickevent",
+        "Type": "server.Features.Projects.Models.Clickevent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.Hover_eventController",
+    "Method": "GetAll",
+    "RelativePath": "api/Hover_event",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.Hover_eventController",
+    "Method": "Create",
+    "RelativePath": "api/Hover_event",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hover_event",
+        "Type": "server.Features.Surverys.Models.Hover_event",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.PageviewController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pageview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.PageviewController",
+    "Method": "Create",
+    "RelativePath": "api/Pageview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageview",
+        "Type": "server.Features.Surverys.Models.Pageview",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.PageviewController",
+    "Method": "GetById",
+    "RelativePath": "api/Pageview/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.ScrollController",
+    "Method": "GetAll",
+    "RelativePath": "api/Scroll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.ScrollController",
+    "Method": "Create",
+    "RelativePath": "api/Scroll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scroll",
+        "Type": "server.Features.Surverys.Models.Scroll",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.TaskresultController",
+    "Method": "GetAll",
+    "RelativePath": "api/Taskresult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.TaskresultController",
+    "Method": "Create",
+    "RelativePath": "api/Taskresult",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskresult",
+        "Type": "server.Features.Surverys.Models.Taskresult",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "server.Features.Users.UserController",
     "Method": "GetAll",
     "RelativePath": "api/User",
@@ -38,6 +184,32 @@
       {
         "Name": "user",
         "Type": "server.Features.Users.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.User_trialController",
+    "Method": "GetAll",
+    "RelativePath": "api/User_trial",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Features.Surverys.User_trialController",
+    "Method": "Create",
+    "RelativePath": "api/User_trial",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user_Trial",
+        "Type": "server.Features.Projects.Models.User_trial",
         "IsRequired": true
       }
     ],
