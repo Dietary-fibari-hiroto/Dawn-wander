@@ -36,7 +36,7 @@ CREATE TABLE user_trials(
 /*---要素定義---*/
 
 CREATE TABLE pages(
-    id INT NOT NULL PRIMARY KEY,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     project_id INT NOT NULL,
     page_name VARCHAR(255) NOT NULL,
     explain_text TEXT NULL,
