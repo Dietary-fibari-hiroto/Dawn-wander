@@ -9,6 +9,9 @@ import OffContest from "../sites/off_ss/pages/OffContest";
 import OffGate from "../sites/off_ss/pages/OffGate";
 import ScrollReset from "../shared/hooks/ScrollReset";
 
+export const OffProjectNumber = 3;
+const AnimationNumber = null;
+
 const RouteList = [
   { path: "/", element: <OffHome /> },
   { path: "/retouch", element: <OffRetouch /> },

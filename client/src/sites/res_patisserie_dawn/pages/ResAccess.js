@@ -1,5 +1,7 @@
 import ReservationButton from "../components/common/ReservationButton";
 
+const pageId = 4;
+
 const ResAccess = () => {
   return (
     <div>

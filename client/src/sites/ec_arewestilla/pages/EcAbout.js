@@ -8,6 +8,8 @@ import {
   PageTitleContainer,
 } from "../components/index.js";
 
+const pageId = 11;
+
 const BrandImgList = [
   EcLogoImagesRoute.F51D2376_20EC_4960_B8D4_9E856CB37B6C,
   EcLogoImagesRoute.kurofvg,

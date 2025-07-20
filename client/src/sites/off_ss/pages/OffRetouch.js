@@ -6,6 +6,9 @@ import {
   OffSectionTitle,
   TopSection,
 } from "../components";
+
+const pageId = 17;
+
 const OffRetouch = () => {
   return (
     <div>

@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 import { SectionTitle } from "../components";
+
+const pageId = 6;
+
 const ResNewsDetail = () => {
   const location = useLocation();
   const data = location.state || {};

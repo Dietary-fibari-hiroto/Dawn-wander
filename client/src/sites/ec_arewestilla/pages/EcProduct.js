@@ -8,6 +8,8 @@ import {
 } from "../components";
 import output from "../constants/output.json";
 
+const pageId = 12;
+
 const EcProduct = () => {
   const [selectGender, setSelectGender] = useState("");
   const [selectBrand, setSelectBrand] = useState("");

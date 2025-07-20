@@ -3,6 +3,8 @@ import EcLogoImagesRoute from "../assets/images/EcLogoImagesRoute";
 import { MiniProductCard, SectionTitle } from "../components";
 import { useCart } from "../contexts/CartContext";
 
+const pageId = 14;
+
 const EcCart = () => {
   const { cart, dispatch } = useCart();
   const [quantity, setQuantity] = useState(0);

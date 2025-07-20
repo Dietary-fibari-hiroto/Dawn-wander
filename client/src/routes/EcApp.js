@@ -21,6 +21,10 @@ const RouteList = [
   { path: "/product", element: <EcProductDetail /> },
 ];
 
+//プロジェクト番号
+export const EcProjectNumber = 2;
+const AnimationNumber = null;
+
 const EcApp = () => {
   const location = useLocation();
 

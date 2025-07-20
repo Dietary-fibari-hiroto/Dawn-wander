@@ -10,6 +10,8 @@ import ResNewsDatas from "../constants/ResNewsDatas";
 
 const animateThreshold = 1;
 
+const pageId = 2;
+
 const ResHome = () => {
   const value = useScrollValue();
   const [blurAmount, setBlurAmount] = useState(0);

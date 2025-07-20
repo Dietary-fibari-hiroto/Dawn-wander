@@ -6,7 +6,9 @@ import {
   FaqTag,
 } from "../components";
 import OffImagesRoute from "../assets/OffImagesRoute";
-import { motion, AnimatePresence } from "framer-motion";
+
+const pageId = 16;
+
 const OffHome = () => {
   //FAQの状態管理
   const [faqShow, setFaqShow] = useState({

@@ -8,6 +8,8 @@ import {
   InductionCard,
 } from "../components";
 
+const pageId = 18;
+
 const OffContest = () => {
   const themaList = [
     "静けさ",

@@ -14,6 +14,9 @@ import ResHeader from "../sites/res_patisserie_dawn/components/layout/ResHeader"
 import { ResFooter } from "../sites/res_patisserie_dawn/components";
 import ScrollReset from "../shared/hooks/ScrollReset";
 
+export const ResProjectNumber = 1;
+const AnimationNumber = null;
+
 const animation = {
   initial: { filter: "blur(10px) saturate(0%)", opacity: 0 },
   animate: { filter: "blur(0px) saturate(100%)", opacity: 1 },

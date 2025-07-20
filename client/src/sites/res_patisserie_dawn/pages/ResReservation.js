@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { SectionTitle } from "../components";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
 
+const pageId = 7;
+
 const formSetting = [
   {
     name: "menber",

@@ -3,6 +3,8 @@ import ResImagesRoute from "../assets/images/ResImagesRoute";
 import useScrollProgressValue from "../hooks/useScrollProgressValue";
 import { SectionTitle, StoreDetailes } from "../components";
 
+const pageId = 3;
+
 const ResAbout = () => {
   const [circleValue, setCircleValue] = useState(); //最大値は1080くらいかな
   const [circleValue2, setCircleValue2] = useState();

@@ -1,4 +1,7 @@
 import { OffSectionTitle, FaqTag, LinkButton } from "../components";
+
+const pageId = 19;
+
 const OffGate = () => {
   return (
     <div>

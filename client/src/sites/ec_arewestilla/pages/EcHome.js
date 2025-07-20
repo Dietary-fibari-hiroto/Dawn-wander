@@ -6,6 +6,9 @@ import {
 } from "../components";
 import SectionTitle from "../components/common/SectionTitle";
 import output from "../constants/output.json";
+
+const pageId = 10;
+
 const EcHome = () => {
   return (
     <div>

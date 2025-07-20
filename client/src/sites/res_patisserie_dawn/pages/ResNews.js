@@ -1,5 +1,8 @@
 import ResNewsDatas from "../constants/ResNewsDatas";
 import { NewsBar, SectionTitle } from "../components";
+
+const pageId = 5;
+
 const ResNews = () => {
   return (
     <div className="py-[200px] ">

@@ -2,6 +2,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { SectionTitle } from "../components";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
 
+const pageId = 8;
+
 const ResReservationConfirm = () => {
   const navigate = useNavigate();
   const location = useLocation();

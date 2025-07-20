@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { SectionTitle } from "../components";
 import EcLogoImagesRoute from "../assets/images/EcLogoImagesRoute";
 
+const pageId = 13;
+
 const EcProductDetail = () => {
   const { dispatch } = useCart();
 
