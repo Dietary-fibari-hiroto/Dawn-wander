@@ -28,9 +28,19 @@ const ResNewsDetail = () => {
   const data = location.state || {};
   return (
     <div className="text-white py-[100px]">
-      <SectionTitle title={data.date} titleJp={data.title} />
+      <div
+        onMouseEnter={() => handleMouseEnter(11)}
+        onMouseLeave={handleMouseLeave}
+      >
+        <SectionTitle title={data.date} titleJp={data.title} />
+      </div>
       <div className="flex-all-center flex-col space-y-[100px] py-[100px]">
-        <img className="w-[1000px] h-[600px]" src={data.img} />
+        <img
+          onMouseEnter={() => handleMouseEnter(12)}
+          onMouseLeave={handleMouseLeave}
+          className="w-[1000px] h-[600px]"
+          src={data.img}
+        />
         <p className="w-[700px] h-auto " style={{ whiteSpace: "pre-line" }}>
           {data.text}
         </p>

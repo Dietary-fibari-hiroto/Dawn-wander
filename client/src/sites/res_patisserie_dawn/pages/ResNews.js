@@ -27,7 +27,13 @@ const ResNews = () => {
 
       <div className="flex flex-col items-center justify-start space-y-[100px]">
         {ResNewsDatas.map((item, index) => (
-          <NewsBar {...item} />
+          <div
+            key={index}
+            onMouseEnter={() => handleMouseEnter(10)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <NewsBar {...item} />
+          </div>
         ))}
       </div>
     </div>

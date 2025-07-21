@@ -120,32 +120,48 @@ const ResHome = () => {
         <img
           className="absolute w-[750px] h-[500px] top-[13%] left-[11%]"
           src={ResImagesRoute.wooden_2594768_1920}
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute w-[600px] h-[750px] top-[18%] left-[55%]"
           src={ResImagesRoute.dessert_6924030_1920}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute z-[3] w-[600px] h-[450px] top-[31%] left-[29%]"
           src={ResImagesRoute.dessert_2603520_1920}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute  w-[600px] h-[900px] top-[42%] left-0"
           src={ResImagesRoute.pexels_amaliamaria11_6292065}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute  w-[450px] h-[300px] top-[44%] left-[42%]"
           src={ResImagesRoute.pexels_pavel_danilyuk_6405650}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute  w-[450px] h-[300px] top-[44%] right-0"
           src={ResImagesRoute.glasses_6800873_1920}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute  w-[600px] h-[900px] top-[55%] right-0"
           src={ResImagesRoute.pexels_pelageia_zelenina_58865108_9976628}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={handleMouseLeave}
           className="absolute  w-[600px] h-[900px] top-[65%] left-[22%]"
           src={ResImagesRoute.pexels_nanamusic_31665647}
         />
@@ -155,12 +171,20 @@ const ResHome = () => {
         <SectionTitle title="News" titleJp="お知らせ" />
         <div className="flex items-center justify-evenly overflow-x-scroll px-[100px] space-x-[100px]">
           {ResNewsDatas.map((item, index) => (
-            <NewsCard {...item} key={index} />
+            <div
+              key={index}
+              onMouseEnter={() => handleMouseEnter(2)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <NewsCard {...item} />
+            </div>
           ))}
         </div>
       </section>
       <section className="section-frame flex-all-center">
         <Link
+          onMouseEnter={() => handleMouseEnter(4)} // ✅ ←ここ絶対 arrow function にする！
+          onMouseLeave={handleMouseLeave}
           to="/res/about"
           className="w-[1200px] h-[600px] flex-all-center flex-col space-y-[50px] text-white text-center"
           style={{

@@ -78,6 +78,7 @@ export const useHover_eventHandler = (user_trialId, pageview_id) => {
           duration_sec: duration_sec,
         };
         const data = await createHover_event(formData);
+        console.log("hover:", data);
       }
       startTimeRef.current = null;
       element_id.current = 0;

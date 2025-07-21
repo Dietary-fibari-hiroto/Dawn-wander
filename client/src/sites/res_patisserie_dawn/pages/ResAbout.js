@@ -66,6 +66,8 @@ const ResAbout = () => {
         </p>
       </section>
       <section
+        onMouseEnter={() => handleMouseEnter(5)} // ✅ ←ここ絶対 arrow function にする！
+        onMouseLeave={handleMouseLeave}
         className="relative w-full h-[300lvh] scroll-target"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.city_7459162_1920})`,
@@ -123,6 +125,8 @@ const ResAbout = () => {
         </div>
       </section>
       <section
+        onMouseEnter={() => handleMouseEnter(6)} // ✅ ←ここ絶対 arrow function にする！
+        onMouseLeave={handleMouseLeave}
         className="relative w-full h-[300lvh] scroll-target2"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.pexels_eva_bronzini_6811161})`,
@@ -180,6 +184,8 @@ const ResAbout = () => {
         </div>
       </section>
       <section
+        onMouseEnter={() => handleMouseEnter(7)} // ✅ ←ここ絶対 arrow function にする！
+        onMouseLeave={handleMouseLeave}
         className="relative w-full h-[300lvh] scroll-target3"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.t_ed_hOgog7l_iuY_unsplash})`,
@@ -236,7 +242,10 @@ const ResAbout = () => {
         </div>
       </section>
       <section className="flex items-center justify-evenly section-frame">
-        <figure>
+        <figure
+          onMouseEnter={() => handleMouseEnter(8)}
+          onMouseLeave={handleMouseLeave}
+        >
           <img
             className="w-[500px] h-[750px]"
             src={ResImagesRoute.pexels_fotios_photos_1855214}
@@ -362,12 +371,17 @@ const ResAbout = () => {
         </div>
       </section>
       <section className="section-frame flex-all-center text-center leading-[40px]">
-        Patisserie DAWNでは
-        <br />
-        特別な非日常をご用意しております。
-        <br />
-        あなたのお越しを、心よりお待ちしております。
-        <br />
+        <div
+          onMouseEnter={() => handleMouseEnter(9)}
+          onMouseLeave={handleMouseLeave}
+        >
+          Patisserie DAWNでは
+          <br />
+          特別な非日常をご用意しております。
+          <br />
+          あなたのお越しを、心よりお待ちしております。
+          <br />
+        </div>
       </section>
       <StoreDetailes />
     </div>
