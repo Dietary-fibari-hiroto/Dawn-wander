@@ -7,7 +7,7 @@ const ScrollReset = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, location);
+  }, [location]);
   return null;
 };
 export default ScrollReset;

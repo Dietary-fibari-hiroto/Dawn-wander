@@ -109,6 +109,18 @@ namespace server.Features.Surverys.Repositories
             await _context.SaveChangesAsync();
             return user_trial;
         }
+        public async Task<User_trial?> UpdateAsync(int id)
+        {
+            var existing = await _context.User_Trials.FindAsync(id);
+            if (existing == null) return null;
+
+            existing.Finished_at = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+            return existing;
+        }
+
+ 
 
     }
 

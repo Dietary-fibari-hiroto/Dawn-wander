@@ -2,14 +2,33 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Click_to, Wander_logo } from "../../../shared/components";
 import { useUser } from "../../../shared/contexts/UserContext";
+import { createUserTrial } from "../../../api/userTrial";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const Note = () => {
   const navigate = useNavigate();
-  const { proccessIndex, trialOrder } = useUser();
+  const { userId, proccessIndex, trialOrder } = useUser();
+  const { setUser_trialId } = useSurvery();
 
   useEffect(() => {
     console.log(proccessIndex);
   }, [proccessIndex]);
+
+  const handleUserTrial = async (operation_id) => {
+    const formData = {
+      user_id: userId,
+      project_id: proccessIndex,
+      operation_id: operation_id,
+    };
+
+    try {
+      const res = await createUserTrial(formData);
+      setUser_trialId(res.id);
+      console.log("re.id:", res.id);
+    } catch (error) {
+      console.log("error");
+    }
+  };
 
   const handleStart = (e) => {
     e.preventDefault();
@@ -18,14 +37,17 @@ const Note = () => {
       //resサイトへ遷移
       trialOrder.first === 1 && navigate("/res");
       trialOrder.first === 2 && console.log("res,アニメーションありへ遷移");
+      handleUserTrial(trialOrder.first);
     } else if (proccessIndex === 2) {
       //ecサイトへ遷移
       trialOrder.second === 1 && navigate("/ec");
       trialOrder.second === 2 && console.log("ec,アニメーションありへ遷移");
+      handleUserTrial(trialOrder.second);
     } else if (proccessIndex === 3) {
       //ssサイトへ遷移
       trialOrder.third === 1 && navigate("/ss");
       trialOrder.third === 2 && console.log("ss,アニメーションありへ遷移");
+      handleUserTrial(trialOrder.third);
     }
   };
 

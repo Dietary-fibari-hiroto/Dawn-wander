@@ -38,5 +38,7 @@ namespace server.Features.Surverys.Services
     {
         Task<IEnumerable<User_trial>> GetAllAsync();
         Task<User_trial> CreateAsync(User_trial user_trial);
+        Task<User_trial?> UpdateAsync(int id);
+
     }
 }

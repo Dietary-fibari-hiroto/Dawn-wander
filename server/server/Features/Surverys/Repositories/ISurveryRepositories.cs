@@ -38,6 +38,7 @@ namespace server.Features.Surverys.Repositories
     {
         Task<IEnumerable<User_trial>> GetAllAsync();
         Task<User_trial> AddAsync(User_trial user_trial);
+        Task<User_trial?> UpdateAsync(int id);
     }
 
 

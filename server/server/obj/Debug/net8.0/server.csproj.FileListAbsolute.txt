@@ -22,7 +22,6 @@ C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\server.csproj.Up2Date
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\server.dll
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\refint\server.dll
@@ -45,3 +44,4 @@ C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

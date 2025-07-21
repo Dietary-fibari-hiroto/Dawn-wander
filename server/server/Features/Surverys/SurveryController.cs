@@ -163,6 +163,14 @@ namespace server.Features.Surverys
             var created = await _service.CreateAsync(user_Trial);
             return Ok(created);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id)
+        {
+
+            var updated = await _service.UpdateAsync(id);
+            return updated ==null ? NotFound() : Ok(updated);
+        }
     }
 
   

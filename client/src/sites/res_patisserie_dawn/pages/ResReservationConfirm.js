@@ -1,10 +1,13 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { SectionTitle } from "../components";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
+import { updateTrialFinish } from "../../../api/userTrial";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 8;
 
 const ResReservationConfirm = () => {
+  const { user_trialId } = useSurvery();
   const navigate = useNavigate();
   const location = useLocation();
   const data = location.state || {};
@@ -32,10 +35,14 @@ const ResReservationConfirm = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // ここで送信処理を書く
     console.log("予約データ:", data);
+    try {
+      const res = await updateTrialFinish(user_trialId);
+      console.log(res);
+    } catch (error) {}
     // 例: navigate("/thanks", { state: data });
   };
 

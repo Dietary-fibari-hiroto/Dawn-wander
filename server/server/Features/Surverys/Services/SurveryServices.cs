@@ -74,6 +74,7 @@ namespace server.Features.Surverys.Services
         }
         public Task<IEnumerable<User_trial>> GetAllAsync() => _repo.GetAllAsync();
         public Task<User_trial> CreateAsync(User_trial user_trial)=> _repo.AddAsync(user_trial);
+        public Task<User_trial?> UpdateAsync(int id)=> _repo.UpdateAsync(id);
     }
 
 

@@ -133,7 +133,7 @@ const ResHome = () => {
         <SectionTitle title="News" titleJp="お知らせ" />
         <div className="flex items-center justify-evenly overflow-x-scroll px-[100px] space-x-[100px]">
           {ResNewsDatas.map((item, index) => (
-            <NewsCard {...item} />
+            <NewsCard {...item} key={index} />
           ))}
         </div>
       </section>
