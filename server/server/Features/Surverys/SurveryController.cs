@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using server.Features.Projects.Models;
 using server.Features.Surverys.Models;
 using server.Features.Surverys.Services;
+using System.Runtime.InteropServices;
 
 namespace server.Features.Surverys
 {
@@ -37,6 +38,18 @@ namespace server.Features.Surverys
         {
             var created = await _service.CreateAsync(pageview);
             return Ok(created);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateStaingtime(int id, [FromBody] UpdateStayingtime updateStayingtime)
+        {
+            var updatePageview = await _service.UpdateAsync(id, updateStayingtime);
+            if (updatePageview == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(updatePageview);
         }
     }
 

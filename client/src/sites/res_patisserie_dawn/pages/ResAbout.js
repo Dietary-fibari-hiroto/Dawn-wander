@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
 import useScrollProgressValue from "../hooks/useScrollProgressValue";
 import { SectionTitle, StoreDetailes } from "../components";
-import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import {
+  useStayDurationHandler,
+  useHover_eventHandler,
+  useUpdateStayDurationHandler,
+} from "../../../shared/handlers/handleSurvery";
+
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 3;
@@ -10,7 +15,15 @@ const pageId = 3;
 const ResAbout = () => {
   const { user_trialId } = useSurvery();
 
-  useStayDurationHandler(() => {}, pageId, user_trialId);
+  const pageview_id = useStayDurationHandler(pageId, user_trialId);
+  useUpdateStayDurationHandler((duration) => {
+    console.log("滞在時間:", duration);
+  }, pageview_id);
+
+  const { handleMouseEnter, handleMouseLeave } = useHover_eventHandler(
+    user_trialId,
+    pageview_id
+  );
   const [circleValue, setCircleValue] = useState(); //最大値は1080くらいかな
   const [circleValue2, setCircleValue2] = useState();
   const [circleValue3, setCircleValue3] = useState();

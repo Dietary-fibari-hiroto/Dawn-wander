@@ -2,14 +2,26 @@ import { OffSectionTitle, LinkButton } from "../components";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
 import { useNavigate } from "react-router-dom";
 import { handleTrialSubmit } from "../../../shared/handlers/handleTrial";
-import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
-
+import {
+  useStayDurationHandler,
+  useHover_eventHandler,
+  useUpdateStayDurationHandler,
+} from "../../../shared/handlers/handleSurvery";
 const pageId = 19;
 
 const OffGate = () => {
   //ページビューの保存
   const { user_trialId } = useSurvery();
-  useStayDurationHandler(() => {}, pageId, user_trialId);
+  const pageview_id = useStayDurationHandler(pageId, user_trialId);
+
+  useUpdateStayDurationHandler((duration) => {
+    console.log("滞在時間:", duration);
+  }, pageview_id);
+
+  const { handleMouseEnter, handleMouseLeave } = useHover_eventHandler(
+    user_trialId,
+    pageview_id
+  );
   const navigate = useNavigate();
 
   return (

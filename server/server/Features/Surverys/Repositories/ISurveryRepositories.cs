@@ -8,6 +8,7 @@ namespace server.Features.Surverys.Repositories
         Task<IEnumerable<Pageview>> GetAllAsync();
         Task<Pageview?> GetByIdAsync(int id);
         Task<Pageview> AddAsync(Pageview pageview);
+        Task UpdateAsync(Pageview pageview);
     }
 
     public interface IClickEventRepository

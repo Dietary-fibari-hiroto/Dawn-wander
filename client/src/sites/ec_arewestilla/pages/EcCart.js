@@ -4,7 +4,11 @@ import { MiniProductCard, SectionTitle } from "../components";
 import { useCart } from "../contexts/CartContext";
 import { useNavigate } from "react-router-dom";
 import { updateTrialFinish } from "../../../api/userTrial";
-import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import {
+  useStayDurationHandler,
+  useHover_eventHandler,
+  useUpdateStayDurationHandler,
+} from "../../../shared/handlers/handleSurvery";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 14;
@@ -12,7 +16,16 @@ const pageId = 14;
 const EcCart = () => {
   //ページビューの保存
   const { user_trialId } = useSurvery();
-  useStayDurationHandler(() => {}, pageId, user_trialId);
+  const pageview_id = useStayDurationHandler(pageId, user_trialId);
+
+  useUpdateStayDurationHandler((duration) => {
+    console.log("滞在時間:", duration);
+  }, pageview_id);
+
+  const { handleMouseEnter, handleMouseLeave } = useHover_eventHandler(
+    user_trialId,
+    pageview_id
+  );
   const navigate = useNavigate();
   const { cart, dispatch } = useCart();
   const [quantity, setQuantity] = useState(0);

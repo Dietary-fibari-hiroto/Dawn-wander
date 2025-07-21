@@ -35,10 +35,10 @@ INSERT INTO pages (project_id, page_name, explain_text) VALUES
 
 /*---element情報---*/
 INSERT INTO elements (page_id, element_name) VALUES
-(2, '1.予約ボタン'),
+(2, '1.予約ボタン,Clickevent'),
 (2, '2.店内イメージ画像'),
-(2, '3.Newsカード'),
-(2, '4.Conceptボード'),
+(2, '3.Newsカード,Clickevent'),
+(2, '4.Conceptボード,Clickevent'),
 
 (3, '5.Conceptセクション'),
 (3, '6.Sweetsセクション'),
@@ -48,43 +48,43 @@ INSERT INTO elements (page_id, element_name) VALUES
 
 -- page4は要素なし
 
-(5, '10.Newsカード'),
+(5, '10.Newsカード,Clickevent'),
 
 (6, '11.NewsTitle'),
 (6, '12.メイン画像'),
 
-(7, '13.確定ボタン'),
+(7, '13.確定ボタン,Clickevent'),
 
 -- page8は要素なし
 
 (10, '14.ホームセクション画像'),
 (10, '15.各イメージ画像各'),
-(10, '16.プロダクトカード各'),
+(10, '16.プロダクトカード各,Clickevent'),
 (10, '17.OurConceptセクション画像'),
-(10, '18.OurConceptセクションボタン'),
+(10, '18.OurConceptセクションボタン,Clickevent'),
 (10, '19.Mensセクション画像'),
-(10, '20.Mensセクションボタン'),
+(10, '20.Mensセクションボタン,Clickevent'),
 (10, '21.Ladysセクション画像'),
-(10, '22.Ladysセクションボタン'),
+(10, '22.Ladysセクションボタン,Clickevent'),
 (10, '23.フッタータイトル'),
 
 (11, '24.ページタイトル'),
 (11, '25.Conceptトップイメージ画像'),
 (11, '26.Conceptテキスト各'),
 (11, '27.OurConceptセクション画像'),
-(11, '28.OurConceptセクションボタン'),
+(11, '28.OurConceptセクションボタン,Clickevent'),
 (11, '29.ブランド画像'),
 
-(12, '30.ProductCard画像'),
+(12, '30.ProductCard画像各'),
 
 (13, '31.商品画像'),
-(13, '32.AddCardボタン'),
-(13, '33.購入ボタン'),
-(13, '34.ウォッシュボタン'),
+(13, '32.AddCardボタン,Clickevent'),
+(13, '33.購入ボタン,Clickevent'),
+(13, '34.ウォッシュボタン,Clickevent'),
 
 (14, '35.PuroductCard'),
-(14, '36.購入ボタン'),
-(14, '37.買い物を続けるボタン'),
+(14, '36.購入ボタン,Clickevent'),
+(14, '37.買い物を続けるボタン,Clickevent'),
 
 (16, '38.topセクションイメージ'),
 (16, '39.トップセクションテキスト'),
@@ -98,7 +98,7 @@ INSERT INTO elements (page_id, element_name) VALUES
 (16, '47.フォトコンテストセクションテキスト'),
 (16, '48.よくある質問各'),
 (16, '49.フッター画像(フッターコンポーネントで共通)'),
-(16, '50.ログインボタン(フッターコンポーネントで共通)'),
+(16, '50.ログインボタン(フッターコンポーネントで共通),Clickevent'),
 
 (17, '51.セクションタイトルテキスト'),
 (17, '52.セクションタイトル画像'),
@@ -109,4 +109,4 @@ INSERT INTO elements (page_id, element_name) VALUES
 (18, '56.セクションタイトルテキスト'),
 (18, '57.セクションタイトル画像'),
 
-(19, '58.登録ボタン');
+(19, '58.登録ボタン,Clickevent');

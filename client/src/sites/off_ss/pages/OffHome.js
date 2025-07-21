@@ -6,7 +6,11 @@ import {
   FaqTag,
 } from "../components";
 import OffImagesRoute from "../assets/OffImagesRoute";
-import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import {
+  useStayDurationHandler,
+  useHover_eventHandler,
+  useUpdateStayDurationHandler,
+} from "../../../shared/handlers/handleSurvery";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 16;
@@ -14,8 +18,16 @@ const pageId = 16;
 const OffHome = () => {
   //ページビューの保存
   const { user_trialId } = useSurvery();
-  useStayDurationHandler(() => {}, pageId, user_trialId);
-  //FAQの状態管理
+  const pageview_id = useStayDurationHandler(pageId, user_trialId);
+
+  useUpdateStayDurationHandler((duration) => {
+    console.log("滞在時間:", duration);
+  }, pageview_id);
+
+  const { handleMouseEnter, handleMouseLeave } = useHover_eventHandler(
+    user_trialId,
+    pageview_id
+  ); //FAQの状態管理
   const [faqShow, setFaqShow] = useState({
     q1: false,
     q2: false,

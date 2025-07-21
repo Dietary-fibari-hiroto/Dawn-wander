@@ -23,6 +23,11 @@ namespace server.Features.Surverys.Repositories
             await _context.SaveChangesAsync();
             return pageview;
         }
+        public async Task UpdateAsync(Pageview pageview)
+        {
+            _context.Pageviews.Update(pageview);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public class ClickeventRepository : IClickEventRepository
@@ -39,6 +44,11 @@ namespace server.Features.Surverys.Repositories
             _context.Clickevents.Add(clickevent);
             await _context.SaveChangesAsync();
             return clickevent;
+        }
+        public async Task UpdateAsync(Pageview pageview)
+        {
+            _context.Pageviews.Update(pageview);
+            await _context.SaveChangesAsync();
         }
     }
 

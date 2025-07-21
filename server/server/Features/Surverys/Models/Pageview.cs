@@ -15,8 +15,13 @@ namespace server.Features.Surverys.Models
         [ForeignKey("User_trial_id")]
         public User_trial? User_Trial { get; set; }
 
-        public float Staing_time { get; set; } = 0;
+        public float? Staing_time { get; set; } = 0;
         public int? After_page { get; set; }
     }
+
+    public class UpdateStayingtime {
+        public float? Staing_time { get; set; } = 0;
+    }
+
 
 }

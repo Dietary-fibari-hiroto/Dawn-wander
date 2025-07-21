@@ -17,6 +17,18 @@ namespace server.Features.Surverys.Services
         public Task<IEnumerable<Pageview>> GetAllAsync() => _repo.GetAllAsync();
         public Task<Pageview?> GetByIdAsync(int id) => _repo.GetByIdAsync(id);
         public Task<Pageview> CreateAsync(Pageview pageview) => _repo.AddAsync(pageview);
+        public async Task<Pageview?> UpdateAsync(int id, UpdateStayingtime updateStayingtime)
+        {
+            var pageview = await _repo.GetByIdAsync(id);
+            if (pageview == null)
+            {
+                return null;
+            }
+
+            pageview.Staing_time = updateStayingtime.Staing_time;
+            await _repo.UpdateAsync(pageview);
+            return pageview;
+        }
     }
 
     public class ClickeventService : IClickeventService

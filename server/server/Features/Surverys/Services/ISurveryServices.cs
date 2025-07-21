@@ -8,6 +8,7 @@ namespace server.Features.Surverys.Services
         Task<IEnumerable<Pageview>> GetAllAsync();
         Task<Pageview?> GetByIdAsync(int id);
         Task<Pageview> CreateAsync(Pageview pageview);
+        Task<Pageview?> UpdateAsync(int id, UpdateStayingtime updateStayingtime);
     }
 
     public interface IClickeventService

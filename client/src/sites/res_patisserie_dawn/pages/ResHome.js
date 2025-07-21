@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import FlutteringCloth from "../components/layout/FlutteringCloth";
@@ -7,23 +7,37 @@ import ResImagesRoute from "../assets/images/ResImagesRoute";
 import { NewsCard, SectionTitle, StoreDetailes } from "../components";
 import ReservationButton from "../components/common/ReservationButton";
 import ResNewsDatas from "../constants/ResNewsDatas";
-import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import {
+  useStayDurationHandler,
+  useHover_eventHandler,
+  useUpdateStayDurationHandler,
+} from "../../../shared/handlers/handleSurvery";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
+
 const animateThreshold = 1;
 
 const pageId = 2;
 
 const ResHome = () => {
   const { user_trialId } = useSurvery();
+
   const value = useScrollValue();
   const [blurAmount, setBlurAmount] = useState(0);
 
-  useStayDurationHandler(() => {}, pageId, user_trialId);
+  const pageview_id = useStayDurationHandler(pageId, user_trialId);
 
   useEffect(() => {
     const normalized = value / 10 - 0.3;
     setBlurAmount(Math.max(0, Math.min(normalized, 0.3)));
   }, [value]);
+  useUpdateStayDurationHandler((duration) => {
+    console.log("滞在時間:", duration);
+  }, pageview_id);
+
+  const { handleMouseEnter, handleMouseLeave } = useHover_eventHandler(
+    user_trialId,
+    pageview_id
+  );
 
   return (
     <div>
@@ -45,7 +59,11 @@ const ResHome = () => {
 
         <div className="absolute w-[100vw] top-0 z-5">
           <section className="relative w-full h-[100vh] flex items-center justify-around block">
-            <div className="absolute left-[80%] top-[80%]">
+            <div
+              onMouseEnter={() => handleMouseEnter(1)} // ✅ ←ここ絶対 arrow function にする！
+              onMouseLeave={handleMouseLeave}
+              className="absolute left-[80%] top-[80%]"
+            >
               <ReservationButton />
             </div>
             <div className="flex flex-col items-center KinutaShinStdN6K">

@@ -149,6 +149,46 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Pageview"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStayingtime"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStayingtime"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStayingtime"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Scroll": {
@@ -532,7 +572,8 @@
           },
           "staing_time": {
             "type": "number",
-            "format": "float"
+            "format": "float",
+            "nullable": true
           },
           "after_page": {
             "type": "integer",
@@ -621,6 +662,17 @@
           "total_click": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateStayingtime": {
+        "type": "object",
+        "properties": {
+          "staing_time": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
           }
         },
         "additionalProperties": false
