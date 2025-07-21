@@ -22,12 +22,6 @@ C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets\msbuild.server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets\msbuild.build.server.props
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.server.props
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.server.props
-C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\server.csproj.Up2Date
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\server.dll
@@ -46,3 +40,8 @@ C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\bin\Debug\net8.0\
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\2230372\MyData\Yuzu_Product\dawn-wander\server\server\obj\Debug\net8.0\staticwebassets.build.json.cache

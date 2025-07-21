@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useUser } from "../../../shared/contexts/UserContext";
+
 const Introduction = () => {
+  const { setProccessIndex, setTrialOrder } = useUser();
   const navigate = useNavigate();
   const [x, setX] = useState("left-[20%]");
   const [text, setText] = useState(":(");
@@ -13,7 +17,14 @@ const Introduction = () => {
     await wait(1000);
     setX("left-[100%]");
     await wait(3000);
-    navigate("/ec");
+    setProccessIndex(1);
+    const randomBool = () => Math.random() < 0.5;
+    setTrialOrder(
+      randomBool
+        ? { first: 1, second: 2, third: 1 }
+        : { first: 2, second: 1, third: 2 }
+    );
+    navigate("/notes");
   };
 
   useEffect(() => {

@@ -4,6 +4,9 @@ INSERT INTO projects (name, type, description, url) VALUES
 ('ec', 1, '模擬サイトAreWeStillA...?のプロジェクト。', '/ec'),
 ('off', 2, '模擬サイトOfficial:ShutterShowcaseのプロジェクト。', '/off');
 
+INSERT INTO operations (type,description) VALUES
+(1,'アニメーションなし'),
+(2,'様々なアニメーションが存在');
 
 /*ページ情報登録*/
 

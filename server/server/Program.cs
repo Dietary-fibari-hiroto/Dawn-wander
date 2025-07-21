@@ -6,6 +6,21 @@ using server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost3000",
+        policy => policy
+            .WithOrigins("https://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+    );
+});
+
+
+
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -19,7 +34,7 @@ builder.Services.RegisterServices();
 
 
 var app = builder.Build();
-
+app.UseCors("AllowLocalhost3000");
 app.MapGet("/", () => "Hello World!");
 
 if (app.Environment.IsDevelopment())

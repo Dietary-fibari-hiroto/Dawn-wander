@@ -18,6 +18,7 @@ code {
     monospace;
 }
 
-img {
+img,
+video {
   object-fit: cover;
 }

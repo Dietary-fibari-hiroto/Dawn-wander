@@ -1,49 +1,77 @@
-import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-const Notes = () => {
-  const [trigger, setTrigger] = useState(false);
-  const animation = {
-    initial: { filter: "blur(10px) saturate(0%)", opacity: 0 },
-    animate: { filter: "blur(0px) saturate(100%)", opacity: 1 },
-    exit: { filter: "blur(10px) saturate(0%)", opacity: 0 },
-    transition: { duration: 0.5 },
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Click_to, Wander_logo } from "../../../shared/components";
+import { useUser } from "../../../shared/contexts/UserContext";
+
+const Note = () => {
+  const navigate = useNavigate();
+  const { proccessIndex, trialOrder } = useUser();
+
+  useEffect(() => {
+    console.log(proccessIndex);
+  }, [proccessIndex]);
+
+  const handleStart = (e) => {
+    e.preventDefault();
+    console.log("proccess:", proccessIndex, "trialOrder:", trialOrder);
+    if (proccessIndex === 1) {
+      //resサイトへ遷移
+      trialOrder.first === 1 && navigate("/res");
+      trialOrder.first === 2 && console.log("res,アニメーションありへ遷移");
+    } else if (proccessIndex === 2) {
+      //ecサイトへ遷移
+      trialOrder.second === 1 && navigate("/ec");
+      trialOrder.second === 2 && console.log("ec,アニメーションありへ遷移");
+    } else if (proccessIndex === 3) {
+      //ssサイトへ遷移
+      trialOrder.third === 1 && navigate("/ss");
+      trialOrder.third === 2 && console.log("ss,アニメーションありへ遷移");
+    }
   };
 
-  useEffect(() => {
-    const waitId = setTimeout(() => {
-      setTrigger(true);
-    }, 2000);
-    return () => clearTimeout(waitId);
-  }, []);
-
-  useEffect(() => {
-    const waitId = setTimeout(() => {
-      setTrigger(false);
-    }, 8000);
-    return () => clearTimeout(waitId);
-  }, [trigger]);
   return (
-    <AnimatePresence>
-      {trigger ? (
-        <motion.div
-          {...animation}
-          className="Kinuta-Shin-StdN-6K section-frame flex-all-center flex-col text-white text-center space-y-[100px]"
-        >
-          <p>/*Notes*/</p>
-          <p>
-            この後に登場するサイトは、すべて実験のために制作された疑似サイトです。
-            <br />
-            表示される商品・ニュース・店舗情報などは、実在の企業・団体とは一切関係ありません。
-            <br />
-            一部に実在のように見える記述やデザインが含まれている可能性がありますが、すべてフィクションとしてお考えください。
-            <br />
-            閲覧中に不審な挙動があっても、個人情報が取得されることは一切ありません。
-            <br />
-          </p>
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+    <div
+      onClick={handleStart}
+      className="section-frame bg-white relative cursor-pointer"
+    >
+      <Wander_logo className={"absolute top-[5%] w-full"} />
+      <div className="absolute-center text-center space-y-[20px]">
+        <p className="string-sm tracking-[3px]">
+          {proccessIndex === 1 && "First experiment"}
+          {proccessIndex === 2 && "Second experiment"}
+          {proccessIndex === 3 && "Third experiment"}
+        </p>
+        {proccessIndex === 1 && (
+          <div className="flex flex-col items-center KinutaShinStdN6K space-y-[-20px]">
+            <p className="string-sm">Patisserie</p>
+            <p className="string-hundred">DAWN</p>
+          </div>
+        )}
+        {proccessIndex === 2 && (
+          <p className="string-hundred Yu-Mincho-Pr6N-R">Are We Still A...?</p>
+        )}
+        {proccessIndex === 3 && (
+          <div className=" Ten-Mincho-Regular string-hundred space-y-[-50px] flex flex-col ">
+            <div className="inline-block">
+              <p className="pr-[200px]">Shutter</p>
+              <div className="off-horizontal-border" />
+            </div>
+            <div className="inline-block">
+              <p className="pl-[200px]">Showcase</p>
+              <div className="off-horizontal-border" />
+            </div>
+          </div>
+        )}
+        <p className="string-sm">
+          {" "}
+          {proccessIndex === 1 && "飲食店公式サイト"}
+          {proccessIndex === 2 && "ECサイト"}
+          {proccessIndex === 3 && "Webアプリ,ランディングページ"}
+        </p>
+      </div>
+      <Click_to className={"absolute bottom-[25%] w-full"} />
+    </div>
   );
 };
 
-export default Notes;
+export default Note;

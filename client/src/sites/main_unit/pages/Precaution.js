@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { useNavigate } from "react-router-dom";
 const Precaution = () => {
   const navigate = useNavigate();

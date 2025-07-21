@@ -3,23 +3,17 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import {
   Start,
   Home,
-  BlurScreen,
   Notes,
   Precaution,
   Introduction,
+  PretrialSurvery,
 } from "../sites/main_unit/pages";
-
-const animation = {
-  initial: { filter: "blur(10px) saturate(0%)", opacity: 0 },
-  animate: { filter: "blur(0px) saturate(100%)", opacity: 1 },
-  exit: { filter: "blur(10px) saturate(0%)", opacity: 0 },
-  transition: { duration: 0.5 },
-};
+import { motionSet } from "../shared/utils/motionConfig";
 
 const RouteList = [
   { path: "/", element: <Start /> },
+  { path: "/pretrialsurvery", element: <PretrialSurvery /> },
   { path: "/home", element: <Home /> },
-  { path: "/blur", element: <BlurScreen /> },
   { path: "/notes", element: <Notes /> },
   { path: "/precaution", element: <Precaution /> },
   { path: "/introduction", element: <Introduction /> },
@@ -28,17 +22,19 @@ const RouteList = [
 const MainUnitApp = () => {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        {RouteList.map((list, index) => (
-          <Route
-            key={index}
-            path={list.path}
-            element={<motion.div {...animation}>{list.element}</motion.div>}
-          />
-        ))}
-      </Routes>
-    </AnimatePresence>
+    <div className="UDDigiKyokasho-Pro-R">
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          {RouteList.map((list, index) => (
+            <Route
+              key={index}
+              path={list.path}
+              element={<motion.div {...motionSet}>{list.element}</motion.div>}
+            />
+          ))}
+        </Routes>
+      </AnimatePresence>
+    </div>
   );
 };
 
