@@ -1,7 +1,9 @@
-# 🌅 Dawan-wander - Animation Research Project
+<img src="dawn_wander_logo.png" alt="ロゴ" width="300" />
+
+# Dawan-wander - Animation Research Project
 
 > **研究テーマ**：アニメーションによる意識誘導  
-> **ジャンル**：HCI / UXデザイン / Webインタラクション
+> **ジャンル**：HCI / UX デザイン / Web インタラクション
 
 ---
 
@@ -11,39 +13,37 @@
 テーマは **「アニメーションによるユーザーの意識誘導」**。  
 さまざまなアニメーションのパターンがユーザー体験に与える影響を検証するために構成されています。
 
-本リポジトリでは、以下の構成で **10種類の疑似Webサイト** を制作しています：
+本リポジトリでは、以下の構成で **10 種類の疑似 Web サイト** を制作しています：
 
-- 💼 **3ジャンルのWebサイト**（例：ECサイト、ニュースサイト、コンセプトサイト）
-- 🎞️ **3種類のアニメーション手法**（例：フェード・スライド・拡大縮小）
+- 💼 **3 ジャンルの Web サイト**（例：EC サイト、ニュースサイト、コンセプトサイト）
+- 🎞️ **3 種類のアニメーション手法**（例：フェード・スライド・拡大縮小）
 - 🧩 **それらを切り替え・比較できる管理ページ**
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Category    | Tech Used                          |
-|-------------|-----------------------------------|
-| Frontend    | React.js / HTML / CSS / JavaScript |
-| Backend     | ASP.NET (C#)                        |
-| Database    | MySQL                               |
-| Server      | Ubuntu Linux                        |
+| Category | Tech Used                          |
+| -------- | ---------------------------------- |
+| Frontend | React.js / HTML / CSS / JavaScript |
+| Backend  | ASP.NET (C#)                       |
+| Database | MySQL                              |
+| Server   | Ubuntu Linux                       |
 
 ---
 
 ## 📂 Directory Overview
 
-/client - フロントエンド（React.jsベース）
-/server - バックエンド（ASP.NET + MySQL連携）
+/client - フロントエンド（React.js ベース）
+/server - バックエンド（ASP.NET + MySQL 連携）
 /controller - サイト切り替え制御ページ
-/animation - アニメーション別のUIパターン
-
-
+/animation - アニメーション別の UI パターン
 
 ---
 
 ## ⚠️ 注意事項
 
-このリポジトリでは、UIの主要ファイルである `index.html` をセキュリティ上の理由から **非公開** にしています。
+このリポジトリでは、UI の主要ファイルである `index.html` をセキュリティ上の理由から **非公開** にしています。
 
 > 💡 クローンしただけでは正常動作しません。  
 > 🔑 必要な場合はお気軽にメッセージをください。共有可能です！
@@ -53,7 +53,7 @@
 ## 💬 Contact
 
 もしこのプロジェクトに興味を持っていただけた方は、ぜひメッセージください！  
-アニメーションによるUX改善の研究や議論、大歓迎です😊
+アニメーションによる UX 改善の研究や議論、大歓迎です 😊
 
 ---
 
@@ -62,4 +62,3 @@
 > **"視線のその先へ、アニメーションが導く。"**
 
 ---
-
