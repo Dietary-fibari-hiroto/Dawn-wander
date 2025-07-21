@@ -2,10 +2,15 @@ import { Link } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 import { SectionTitle } from "../components";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 6;
 
 const ResNewsDetail = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const location = useLocation();
   const data = location.state || {};
   return (

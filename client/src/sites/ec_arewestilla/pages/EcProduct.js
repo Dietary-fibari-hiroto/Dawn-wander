@@ -7,10 +7,15 @@ import {
   SelectContainer,
 } from "../components";
 import output from "../constants/output.json";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 12;
 
 const EcProduct = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const [selectGender, setSelectGender] = useState("");
   const [selectBrand, setSelectBrand] = useState("");
   const [selectSort, setSelectSort] = useState("");

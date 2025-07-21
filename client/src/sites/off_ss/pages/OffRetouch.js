@@ -6,10 +6,15 @@ import {
   OffSectionTitle,
   TopSection,
 } from "../components";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 17;
 
 const OffRetouch = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   return (
     <div>
       <TopSection

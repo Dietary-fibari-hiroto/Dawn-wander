@@ -37,6 +37,7 @@ const UserProvider = ({ children }) => {
     if (proccessIndex) {
       localStorage.setItem(proccessStrageName, JSON.stringify(proccessIndex));
     }
+    console.log("index", proccessIndex);
   }, [proccessIndex]);
 
   // localStorage.setItem(STORAGE_KEY, JSON.stringify(counts));　trialOrderの格納方法

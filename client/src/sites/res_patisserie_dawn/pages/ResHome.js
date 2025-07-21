@@ -7,14 +7,18 @@ import ResImagesRoute from "../assets/images/ResImagesRoute";
 import { NewsCard, SectionTitle, StoreDetailes } from "../components";
 import ReservationButton from "../components/common/ReservationButton";
 import ResNewsDatas from "../constants/ResNewsDatas";
-
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 const animateThreshold = 1;
 
 const pageId = 2;
 
 const ResHome = () => {
+  const { user_trialId } = useSurvery();
   const value = useScrollValue();
   const [blurAmount, setBlurAmount] = useState(0);
+
+  useStayDurationHandler(() => {}, pageId, user_trialId);
 
   useEffect(() => {
     const normalized = value / 10 - 0.3;

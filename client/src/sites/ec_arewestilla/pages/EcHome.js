@@ -6,10 +6,14 @@ import {
 } from "../components";
 import SectionTitle from "../components/common/SectionTitle";
 import output from "../constants/output.json";
-
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 const pageId = 10;
 
 const EcHome = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   return (
     <div>
       <section className="section-frame flex-all-center">

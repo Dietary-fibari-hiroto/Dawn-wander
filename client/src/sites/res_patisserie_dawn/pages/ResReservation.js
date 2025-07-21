@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SectionTitle } from "../components";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 7;
 
@@ -26,6 +28,9 @@ const formSetting = [
   },
 ];
 const ResReservation = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
 

@@ -7,6 +7,8 @@ import {
   SectionTitle,
   PageTitleContainer,
 } from "../components/index.js";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 11;
 
@@ -21,6 +23,9 @@ const BrandImgList = [
   EcLogoImagesRoute.shopimage_0,
 ];
 const EcAbout = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   return (
     <div>
       <PageTitleContainer

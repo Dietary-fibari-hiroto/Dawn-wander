@@ -6,10 +6,15 @@ import {
   FaqTag,
 } from "../components";
 import OffImagesRoute from "../assets/OffImagesRoute";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 16;
 
 const OffHome = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   //FAQの状態管理
   const [faqShow, setFaqShow] = useState({
     q1: false,

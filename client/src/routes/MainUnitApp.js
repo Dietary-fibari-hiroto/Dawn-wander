@@ -7,6 +7,7 @@ import {
   Precaution,
   Introduction,
   PretrialSurvery,
+  Question,
 } from "../sites/main_unit/pages";
 import { motionSet } from "../shared/utils/motionConfig";
 
@@ -17,6 +18,7 @@ const RouteList = [
   { path: "/notes", element: <Notes /> },
   { path: "/precaution", element: <Precaution /> },
   { path: "/introduction", element: <Introduction /> },
+  { path: "/question", element: <Question /> },
 ];
 
 const MainUnitApp = () => {

@@ -2,10 +2,15 @@ import { useState, useEffect } from "react";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
 import useScrollProgressValue from "../hooks/useScrollProgressValue";
 import { SectionTitle, StoreDetailes } from "../components";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 3;
 
 const ResAbout = () => {
+  const { user_trialId } = useSurvery();
+
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const [circleValue, setCircleValue] = useState(); //最大値は1080くらいかな
   const [circleValue2, setCircleValue2] = useState();
   const [circleValue3, setCircleValue3] = useState();

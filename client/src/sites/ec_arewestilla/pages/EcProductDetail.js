@@ -3,10 +3,15 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { SectionTitle } from "../components";
 import EcLogoImagesRoute from "../assets/images/EcLogoImagesRoute";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 13;
 
 const EcProductDetail = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const { dispatch } = useCart();
 
   const [selectedSize, setSelectedSize] = useState("");

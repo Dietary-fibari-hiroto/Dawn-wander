@@ -2,13 +2,29 @@ import { useState, useEffect } from "react";
 import EcLogoImagesRoute from "../assets/images/EcLogoImagesRoute";
 import { MiniProductCard, SectionTitle } from "../components";
 import { useCart } from "../contexts/CartContext";
+import { useNavigate } from "react-router-dom";
+import { updateTrialFinish } from "../../../api/userTrial";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 14;
 
 const EcCart = () => {
+  //ページビューの保存
+  const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
+  const navigate = useNavigate();
   const { cart, dispatch } = useCart();
   const [quantity, setQuantity] = useState(0);
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await updateTrialFinish(user_trialId);
+      navigate("/question");
+    } catch (error) {
+      console.log("updateTrialFinishエラー");
+    }
+  };
   useEffect(() => {
     console.log(cart);
   }, [cart]);

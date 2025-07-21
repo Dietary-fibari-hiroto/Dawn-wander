@@ -1,13 +1,16 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { SectionTitle } from "../components";
 import ResImagesRoute from "../assets/images/ResImagesRoute";
-import { updateTrialFinish } from "../../../api/userTrial";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
+import { handleTrialSubmit } from "../../../shared/handlers/handleTrial";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
 
 const pageId = 8;
 
 const ResReservationConfirm = () => {
+  //ページビューの保存
   const { user_trialId } = useSurvery();
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   const navigate = useNavigate();
   const location = useLocation();
   const data = location.state || {};
@@ -35,17 +38,6 @@ const ResReservationConfirm = () => {
     },
   ];
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // ここで送信処理を書く
-    console.log("予約データ:", data);
-    try {
-      const res = await updateTrialFinish(user_trialId);
-      console.log(res);
-    } catch (error) {}
-    // 例: navigate("/thanks", { state: data });
-  };
-
   return (
     <div className="py-[100px] space-y-[100px] w-[100vw] text-white">
       <SectionTitle title="予約内容確認" titleJp="reservation" />
@@ -57,7 +49,7 @@ const ResReservationConfirm = () => {
           </div>
 
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(e) => handleTrialSubmit({ e, user_trialId, navigate })}
             className="w-[1000px] flex flex-col string-ss kinuta-maruminfuji-stdn space-y-[30px] flex-all-center"
           >
             {formSetting.map((item, index) => (

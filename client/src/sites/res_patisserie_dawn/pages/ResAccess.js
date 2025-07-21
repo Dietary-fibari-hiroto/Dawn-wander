@@ -1,8 +1,13 @@
 import ReservationButton from "../components/common/ReservationButton";
+import { useStayDurationHandler } from "../../../shared/handlers/handleSurvery";
+import { useSurvery } from "../../../shared/contexts/SurveryContext";
 
 const pageId = 4;
 
 const ResAccess = () => {
+  const { user_trialId } = useSurvery();
+
+  useStayDurationHandler(() => {}, pageId, user_trialId);
   return (
     <div>
       <section className="flex-all-center text-white text-end my-[200px]">
