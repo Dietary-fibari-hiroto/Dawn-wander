@@ -122,10 +122,10 @@ CREATE TABLE questions(
 CREATE TABLE responses(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     survey_id INT NOT NULL,
-    user_id INT NOT NULL,
+    user_trial_id INT NOT NULL,
     responded_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (survey_id) REFERENCES surveys(id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    FOREIGN KEY (user_trial_id) REFERENCES user_trial(id)
 )ENGINE=InnoDB;
 
 CREATE TABLE answers(

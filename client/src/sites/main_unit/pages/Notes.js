@@ -36,18 +36,21 @@ const Note = () => {
     if (proccessIndex === 1) {
       //resサイトへ遷移
       trialOrder.first === 1 && navigate("/res");
-      trialOrder.first === 2 && console.log("res,アニメーションありへ遷移");
+      trialOrder.first === 2 && navigate("/ani/res");
       handleUserTrial(trialOrder.first);
     } else if (proccessIndex === 2) {
       //ecサイトへ遷移
       trialOrder.second === 1 && navigate("/ec");
-      trialOrder.second === 2 && console.log("ec,アニメーションありへ遷移");
+      trialOrder.second === 2 && navigate("/ani/ec");
       handleUserTrial(trialOrder.second);
     } else if (proccessIndex === 3) {
       //ssサイトへ遷移
-      trialOrder.third === 1 && navigate("/ss");
-      trialOrder.third === 2 && console.log("ss,アニメーションありへ遷移");
+      trialOrder.third === 1 && navigate("/off");
+      trialOrder.third === 2 && navigate("/ani/off");
       handleUserTrial(trialOrder.third);
+    } else if (proccessIndex === 4) {
+      window.location.href =
+        "https://docs.google.com/forms/d/e/1FAIpQLScwmUEsPItHwtnw_Zi0gGPvrMdF4iWV0Wa1vCzGdpOvoqi2FA/viewform?usp=header";
     }
   };
 
@@ -62,6 +65,7 @@ const Note = () => {
           {proccessIndex === 1 && "First experiment"}
           {proccessIndex === 2 && "Second experiment"}
           {proccessIndex === 3 && "Third experiment"}
+          {proccessIndex === 4 && "end"}
         </p>
         {proccessIndex === 1 && (
           <div className="flex flex-col items-center KinutaShinStdN6K space-y-[-20px]">
@@ -84,11 +88,16 @@ const Note = () => {
             </div>
           </div>
         )}
+        {proccessIndex === 4 && (
+          <p className="string-hundred Yu-Mincho-Pr6N-R">Danw-wander</p>
+        )}
         <p className="string-sm">
           {" "}
           {proccessIndex === 1 && "飲食店公式サイト"}
           {proccessIndex === 2 && "ECサイト"}
           {proccessIndex === 3 && "Webアプリ,ランディングページ"}
+          {proccessIndex === 4 &&
+            "ご協力ありがとうございました。アンケートに進んでいただきます。"}
         </p>
       </div>
       <Click_to className={"absolute bottom-[25%] w-full"} />

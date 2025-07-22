@@ -1,0 +1,19 @@
+.plus-motion {
+  transition: transform 0.3s ease-in-out;
+}
+.plus-motion:hover {
+  transform: rotate(180deg) scale(1.5);
+}
+
+.slider {
+  animation: slider 60s linear infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}

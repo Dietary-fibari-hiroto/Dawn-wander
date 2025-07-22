@@ -110,3 +110,13 @@ INSERT INTO elements (page_id, element_name) VALUES
 (18, '57.セクションタイトル画像'),
 
 (19, '58.登録ボタン,Clickevent');
+
+
+/*---アンケート部分---*/
+
+INSERT INTO surveys(title,description) VALUES,
+("アニメーションなし試行後アンケ―ド","施行後の意識調査アンケート"),
+("アニメーションあり試行後アンケ―ド","施行後の意識調査アンケート");
+
+INSERT INTO questions(survey_id,question_text,question_type) VALUES,
+("1")

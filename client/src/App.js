@@ -3,6 +3,9 @@ import EcApp from "./routes/EcApp";
 import MainUnitApp from "./routes/MainUnitApp";
 import ResApp from "./routes/ResApp";
 import OffApp from "./routes/OffApp";
+import AniResApp from "./routes/AniResApp";
+import AniEcApp from "./routes/AniEcApp";
+import AniOffApp from "./routes/AniOffApp";
 import Test from "./test/Test";
 import UserProvider from "./shared/contexts/UserContext";
 import SurveryProvider from "./shared/contexts/SurveryContext";
@@ -17,6 +20,11 @@ function App() {
             <Route path="/ec/*" element={<EcApp />} />
             <Route path="/res/*" element={<ResApp />} />
             <Route path="/off/*" element={<OffApp />} />
+
+            <Route path="/ani/res/*" element={<AniResApp />} />
+            <Route path="/ani/ec/*" element={<AniEcApp />} />
+            <Route path="/ani/off/*" element={<AniOffApp />} />
+
             <Route path="/test" element={<Test />} />
           </Routes>
         </BrowserRouter>

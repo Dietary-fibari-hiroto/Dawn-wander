@@ -18,7 +18,7 @@ const Introduction = () => {
     setX("left-[100%]");
     await wait(3000);
     setProccessIndex(1);
-    const randomBool = () => Math.random() < 0.5;
+    const randomBool = Math.random() < 0.5;
     setTrialOrder(
       randomBool
         ? { first: 1, second: 2, third: 1 }
