@@ -153,20 +153,29 @@ const EcAbout = () => {
         {/**画像配置 */}
         <div className="absolute w-screen h-[500lvh] top-0 left-0 z-[6] ">
           <img
+            onMouseEnter={() => handleMouseEnter(25)}
+            onMouseLeave={handleMouseLeave}
             className="absolute w-[700px] h-[875px] top-[9%] left-[5%]"
             src={EcImagesRoute.p438602871_345978747968461_5251680703168824051_n}
           />
 
           <img
+            onMouseEnter={() => handleMouseEnter(27)}
+            onMouseLeave={handleMouseLeave}
             className="size-[1000px] absolute top-[67%] left-[20%]"
             src={EcImagesRoute.mideal2way_________________5920RD}
           />
-          <ConceptTransitionButton
-            className="absolute top-[72%] left-[60%]"
-            to="/ec/productlist"
-            concept="商品一覧"
-            title="Our Product"
-          />
+          <div
+            onMouseEnter={() => handleMouseEnter(28)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <ConceptTransitionButton
+              className="absolute top-[72%] left-[60%]"
+              to="/ec/productlist"
+              concept="商品一覧"
+              title="Our Product"
+            />
+          </div>
         </div>
 
         {/**表示テキスト */}
@@ -267,7 +276,13 @@ const EcAbout = () => {
         <SectionTitle title="BrandList" titleJp="取り扱いブランド" />
         <div className="grid grid-cols-4 gap-4 place-items-center w-[50%]">
           {BrandImgList.map((item, index) => (
-            <img className="size-[200px]" key={index} src={item} />
+            <img
+              onMouseEnter={() => handleMouseEnter(29)}
+              onMouseLeave={handleMouseLeave}
+              className="size-[200px]"
+              key={index}
+              src={item}
+            />
           ))}
         </div>
       </section>

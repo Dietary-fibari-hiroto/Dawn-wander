@@ -37,7 +37,11 @@ const EcHome = () => {
             <p className="string-big">Are We Still A...?</p>
           </div>
         </div>
-        <figure className="w-1/2 h-full">
+        <figure
+          onMouseEnter={() => handleMouseEnter(14)}
+          onMouseLeave={handleMouseLeave}
+          className="w-1/2 h-full"
+        >
           <img
             className="w-full h-full"
             src={EcImagesRoute.p464739458_416156958199650_3162208171733525292_n}
@@ -46,14 +50,20 @@ const EcHome = () => {
       </section>
       <section className="section-frame relative">
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[2%] left-[10%] w-[400px] h-[500px] "
           src={EcImagesRoute.p465189818_3939773542908699_8873408741192309513_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute w-[400px] h-[500px] top-[39%] left-[27%] z-[3]"
           src={EcImagesRoute.p464739458_416156958199650_3162208171733525292_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute w-[300px] h-[450px] top-[45%] left-[73%] z-[3]"
           src={EcImagesRoute.p465523955_568969585623225_5011903062634586769_n}
         />
@@ -83,26 +93,38 @@ const EcHome = () => {
       </section>
       <section className="relative w-full h-[300lvh]">
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[8%] left-[7%] w-[500px] h-[625px]"
           src={EcImagesRoute.p465016259_518845894375867_8285105657171650499_n}
         />{" "}
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[29%] left-[42%] w-[600px] h-[750px]"
           src={EcImagesRoute.p465072607_1461049087899559_588075790240556776_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[36%] left-[18%] z-[3] w-[600px] h-[750px]"
           src={EcImagesRoute.p342556318_115896121460895_8287576671975300005_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[62%] left-[52%] z-[3] w-[500px] h-[625px]"
           src={EcImagesRoute.p400475984_1022956298820493_8107272998278097604_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[73%] left-[6%] w-[500px] h-[625px]"
           src={EcImagesRoute.p342733903_151170067913370_6675419363304254692_n}
         />
         <img
+          onMouseEnter={() => handleMouseEnter(15)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[80%] left-[45%] w-[300px] h-[375px]"
           src={EcImagesRoute.p464977767_560983056316378_134872665243504907_n}
         />
@@ -111,7 +133,13 @@ const EcHome = () => {
         <SectionTitle title="Product" titleJp="商品一覧" />
         <div className="w-[100vw] overflow-scroll flex space-x-[50px] px-[100px]">
           {output.slice(0, 6).map((item, index) => (
-            <ProductCard key={index} {...item} />
+            <div
+              key={index}
+              onMouseEnter={() => handleMouseEnter(16)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <ProductCard {...item} />
+            </div>
           ))}
         </div>
         <div className="w-full flex-all-center py-[30px]">
@@ -124,45 +152,66 @@ const EcHome = () => {
           titleJp="「Are We Still A...?」について"
         />
         <img
+          onMouseEnter={() => handleMouseEnter(17)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-1/2 left-[30%] translate-y-[-40%] size-[600px]"
           src={EcImagesRoute.p394950440_1395983420954633_4006749580879168449_n}
         />
-        <ConceptTransitionButton
-          className="absolute top-[30%] right-[15%] z-[3]"
-          to="/ec/about"
-          concept="our concept"
-          title="私たちは、まだ途中だ。"
-        />
+        <div
+          onMouseEnter={() => handleMouseEnter(18)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <ConceptTransitionButton
+            className="absolute top-[30%] right-[15%] z-[3]"
+            to="/ec/about"
+            concept="our concept"
+            title="私たちは、まだ途中だ。"
+          />
+        </div>
       </section>
       <section className="section-frame relative">
         <div className="absolute bottom-[5%] left-[10%]">
           <div className="relative w-[700px] h-[700px] ">
             <img
+              onMouseEnter={() => handleMouseEnter(21)}
+              onMouseLeave={handleMouseLeave}
               className="w-[500px] h-[625px] absolute top-0 left-0"
               src={
                 EcImagesRoute.p454242905_1050173736446959_4193106417481059157_n
               }
             />
-            <ConceptTransitionButton
-              className="absolute right-0 bottom-0 z-[3]"
-              to="/ec/productlist"
-              concept="our product"
-              title="LADY'S"
-            />
+            <div
+              onMouseEnter={() => handleMouseEnter(22)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <ConceptTransitionButton
+                className="absolute right-0 bottom-0 z-[3]"
+                to="/ec/productlist"
+                concept="our product"
+                title="LADY'S"
+              />
+            </div>
           </div>
         </div>
         <div className="absolute top-[5%] right-[10%]">
           <div className="relative w-[700px] h-[700px] absolute right-[10%] top-[0%]">
             <img
+              onMouseEnter={() => handleMouseEnter(19)}
+              onMouseLeave={handleMouseLeave}
               className="w-[500px] h-[625px] absolute top-0 left-0"
               src={EcImagesRoute.IMG_3855}
             />
-            <ConceptTransitionButton
-              className="absolute right-0 bottom-0 z-[3]"
-              to="/ec/productlist"
-              concept="our product"
-              title="MEN'S"
-            />
+            <div
+              onMouseEnter={() => handleMouseEnter(20)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <ConceptTransitionButton
+                className="absolute right-0 bottom-0 z-[3]"
+                to="/ec/productlist"
+                concept="our product"
+                title="MEN'S"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -44,6 +44,8 @@ const OffHome = () => {
       <section className="section-frame relative">
         <div className="absolute bottom-[5%] left-[3%]">
           <img
+            onMouseEnter={() => handleMouseEnter(38)}
+            onMouseLeave={handleMouseLeave}
             className="absolute z-[2]"
             src={OffImagesRoute.IMG_7028}
             style={{
@@ -65,6 +67,8 @@ const OffHome = () => {
         </div>
         <div className="absolute right-0 top-1/2 translate-y-[-50%]">
           <img
+            onMouseEnter={() => handleMouseEnter(38)}
+            onMouseLeave={handleMouseLeave}
             className="absolute top-1/2 translate-y-[-50%]"
             src={OffImagesRoute.IMG_2847}
             style={{
@@ -84,10 +88,16 @@ const OffHome = () => {
           />
         </div>
         <img
+          onMouseEnter={() => handleMouseEnter(38)}
+          onMouseLeave={handleMouseLeave}
           className="absolute top-[15%] right-[35%] size-[350px] rounded-[50%]"
           src={OffImagesRoute.IMG_28582}
         />
-        <div className=" Ten-Mincho-Regular string-hundred absolute top-1/2 left-[20%] translate-y-[-50%] z-[3] flex flex-col">
+        <div
+          onMouseEnter={() => handleMouseEnter(39)}
+          onMouseLeave={handleMouseLeave}
+          className=" Ten-Mincho-Regular string-hundred absolute top-1/2 left-[20%] translate-y-[-50%] z-[3] flex flex-col"
+        >
           <div className="inline-block">
             <p>Shutter</p>
             <div className="off-horizontal-border" />
@@ -106,7 +116,11 @@ const OffHome = () => {
       </section>
       <div className="relative">
         <section className="section-frame relative">
-          <div className="absolute top-1/2 translate-y-[-50%] left-1/4 z-[2] translate-x-[-50%] flex string-sm tracking-[12px] space-x-[20px]">
+          <div
+            onMouseEnter={() => handleMouseEnter(40)}
+            onMouseLeave={handleMouseLeave}
+            className="absolute top-1/2 translate-y-[-50%] left-1/4 z-[2] translate-x-[-50%] flex string-sm tracking-[12px] space-x-[20px]"
+          >
             <div className="flex space-x-[10px]">
               <p className="vertical-text ">写真がつなぐ、</p>
               <div className="off-vertical-border h-1/2" />
@@ -117,6 +131,8 @@ const OffHome = () => {
             </div>
           </div>
           <img
+            onMouseEnter={() => handleMouseEnter(41)}
+            onMouseLeave={handleMouseLeave}
             className="w-[450px] h-[600px] absolute bottom-0 right-0 z-[2]"
             src={OffImagesRoute.IMG_2691}
           />
@@ -160,10 +176,14 @@ const OffHome = () => {
         </section>
         <section className="section-frame relative">
           <img
+            onMouseEnter={() => handleMouseEnter(41)}
+            onMouseLeave={handleMouseLeave}
             className="w-[500px] h-[700px] absolute top-0 right-[10%]"
             src={OffImagesRoute.IMG_2810}
           />
           <img
+            onMouseEnter={() => handleMouseEnter(41)}
+            onMouseLeave={handleMouseLeave}
             className="absolute bottom-1/2 translate-y-1/2 left-0 w-[1000px] h-[666px]"
             src={OffImagesRoute.IMG_2855}
           />
@@ -184,7 +204,11 @@ const OffHome = () => {
             <p className="string-big">手軽に。</p>
           </OffSectionTitle>
           <div className="flex-all-center space-x-[100px]">
-            <figure className="w-[546px] h-[402px] relative">
+            <figure
+              onMouseEnter={() => handleMouseEnter(42)}
+              onMouseLeave={handleMouseLeave}
+              className="w-[546px] h-[402px] relative"
+            >
               <img
                 className="size-[300px] absolute top-0 left-0"
                 src={OffImagesRoute.img2_ss}
@@ -194,16 +218,21 @@ const OffHome = () => {
                 src={OffImagesRoute.img1_ss}
               />
             </figure>
-            <OffMainText>
-              <p>
-                写真をアップロードするだけで、世界観のあるページが完成。
-                <br />
-                用意されたテンプレートを使えば、センスに自信がなくても大丈夫。
-                <br />
-                カメラマンも、被写体も、ただ写真が好きな人も、自分らしさを自然に表現できます。
-                <br />
-              </p>
-            </OffMainText>
+            <div
+              onMouseEnter={() => handleMouseEnter(43)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <OffMainText>
+                <p>
+                  写真をアップロードするだけで、世界観のあるページが完成。
+                  <br />
+                  用意されたテンプレートを使えば、センスに自信がなくても大丈夫。
+                  <br />
+                  カメラマンも、被写体も、ただ写真が好きな人も、自分らしさを自然に表現できます。
+                  <br />
+                </p>
+              </OffMainText>
+            </div>
           </div>
         </section>
         <section className="section-frame flex-all-center flex-col space-y-[50px]">
@@ -214,17 +243,27 @@ const OffHome = () => {
             <span>ゆるやかなコミュニティ。</span>
           </OffSectionTitle>
           <div className="flex-all-center space-x-[100px]">
-            <OffMainText>
-              <p>
-                コメントやリアクション機能で、写真への感想や共感を伝え合える。
-                <br />
-                タグ検索で、似た雰囲気の人やテーマがすぐ見つかる。
-                <br />
-                SNSよりも静かで、作品の空気感がしっかり残るやり取りを。
-                <br />
-              </p>
-            </OffMainText>
-            <img className="size-[500px]" src={OffImagesRoute.IMG_3423} />
+            <div
+              onMouseEnter={() => handleMouseEnter(43)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <OffMainText>
+                <p>
+                  コメントやリアクション機能で、写真への感想や共感を伝え合える。
+                  <br />
+                  タグ検索で、似た雰囲気の人やテーマがすぐ見つかる。
+                  <br />
+                  SNSよりも静かで、作品の空気感がしっかり残るやり取りを。
+                  <br />
+                </p>
+              </OffMainText>
+            </div>
+            <img
+              onMouseEnter={() => handleMouseEnter(42)}
+              onMouseLeave={handleMouseLeave}
+              className="size-[500px]"
+              src={OffImagesRoute.IMG_3423}
+            />
           </div>
         </section>
         <section className="relative section-frame flex-all-center flex-col space-y-[50px]">
@@ -235,30 +274,44 @@ const OffHome = () => {
             <span className="string-big">探そう。</span>
           </OffSectionTitle>
           <div className="flex-all-center space-x-[100px]">
-            <img className="w-[600px] h-[400px]" src={OffImagesRoute.img3_ss} />
-            <OffMainText>
-              <p>
-                写真とマップをつなげて、
-                <br />
-                あなたの「行きたい」を叶えるフォトスポット機能を用意しました。
-                <br />
-                気になる写真に出会ったら、ワンタップで地図をチェック。
-                <br />
-                自分が見た景色を、誰かもきっと撮っている。
-                <br />
-                そんなつながりを、旅先でも日常でも感じられます。
-                <br />
-                あなたの「ここで撮ったよ」も、誰かの「行きたい」になるかもしれません。
-                <br />{" "}
-              </p>
-            </OffMainText>
+            <img
+              onMouseEnter={() => handleMouseEnter(42)}
+              onMouseLeave={handleMouseLeave}
+              className="w-[600px] h-[400px]"
+              src={OffImagesRoute.img3_ss}
+            />
+            <div
+              onMouseEnter={() => handleMouseEnter(43)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <OffMainText>
+                <p>
+                  写真とマップをつなげて、
+                  <br />
+                  あなたの「行きたい」を叶えるフォトスポット機能を用意しました。
+                  <br />
+                  気になる写真に出会ったら、ワンタップで地図をチェック。
+                  <br />
+                  自分が見た景色を、誰かもきっと撮っている。
+                  <br />
+                  そんなつながりを、旅先でも日常でも感じられます。
+                  <br />
+                  あなたの「ここで撮ったよ」も、誰かの「行きたい」になるかもしれません。
+                  <br />{" "}
+                </p>
+              </OffMainText>
+            </div>
           </div>
           <div className="off-vertical-border h-[300px] absolute bottom-[-15%] left-[20%]" />
         </section>
       </div>
       <div>
         <section className="section-frame relative">
-          <div className="absolute top-1/2 translate-y-[-50%] left-[15%]  z-[2] flex-all-center flex-col">
+          <div
+            onMouseEnter={() => handleMouseEnter(45)}
+            onMouseLeave={handleMouseLeave}
+            className="absolute top-1/2 translate-y-[-50%] left-[15%]  z-[2] flex-all-center flex-col"
+          >
             <p className="string-m">レタッチで繋がる</p>
             <OffMainText>
               <p className="string-lg">変わらぬ日々に、魔法をかけて</p>
@@ -266,12 +319,18 @@ const OffHome = () => {
             <LinkButton className="mt-[10px]" to="" label="のぞく..." />
           </div>
           <img
+            onMouseEnter={() => handleMouseEnter(44)}
+            onMouseLeave={handleMouseLeave}
             className="w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] right-[15%]"
             src={OffImagesRoute.retoutch_img}
           />
         </section>
         <section className="section-frame relative">
-          <div className=" absolute top-1/2 translate-y-[-50%] right-[15%]  z-[2] flex-all-center flex-col">
+          <div
+            onMouseEnter={() => handleMouseEnter(47)}
+            onMouseLeave={handleMouseLeave}
+            className=" absolute top-1/2 translate-y-[-50%] right-[15%]  z-[2] flex-all-center flex-col"
+          >
             <p className="string-m">気軽にフォトコンテスト</p>
             <OffMainText>
               <p className="string-lg">尊い瞬間、を拾い集めて</p>
@@ -279,6 +338,8 @@ const OffHome = () => {
             <LinkButton className="mt-[10px]" to="" label="のぞく..." />
           </div>
           <img
+            onMouseEnter={() => handleMouseEnter(46)}
+            onMouseLeave={handleMouseLeave}
             className="w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] left-[15%]"
             src={OffImagesRoute.ins}
           />
@@ -292,24 +353,39 @@ const OffHome = () => {
           <span>(FAQ)</span>
         </OffSectionTitle>
         <div className="flex-all-center flex-col space-y-[50px] mt-[200px]">
-          <FaqTag
-            state={faqShow.q1}
-            onClick={() => toggle("q1")}
-            q="「カメラ初心者でも大丈夫ですか？」"
-            a="はい。お写真を撮られるならどなたでもお使いいただけます。"
-          />{" "}
-          <FaqTag
-            state={faqShow.q2}
-            onClick={() => toggle("q2")}
-            q="「料金はかかりますか？」"
-            a="基本無料でご利用いただけますが、一部機能が有料となっております。"
-          />{" "}
-          <FaqTag
-            state={faqShow.q3}
-            onClick={() => toggle("q3")}
-            q="「どんな機能がありますか？」"
-            a="SNS、メッセージ、ポートフォリオなど、様々な機能をご用意しております。"
-          />
+          <div
+            onMouseEnter={() => handleMouseEnter(48)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <FaqTag
+              state={faqShow.q1}
+              onClick={() => toggle("q1")}
+              q="「カメラ初心者でも大丈夫ですか？」"
+              a="はい。お写真を撮られるならどなたでもお使いいただけます。"
+            />{" "}
+          </div>{" "}
+          <div
+            onMouseEnter={() => handleMouseEnter(48)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <FaqTag
+              state={faqShow.q2}
+              onClick={() => toggle("q2")}
+              q="「料金はかかりますか？」"
+              a="基本無料でご利用いただけますが、一部機能が有料となっております。"
+            />{" "}
+          </div>{" "}
+          <div
+            onMouseEnter={() => handleMouseEnter(48)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <FaqTag
+              state={faqShow.q3}
+              onClick={() => toggle("q3")}
+              q="「どんな機能がありますか？」"
+              a="SNS、メッセージ、ポートフォリオなど、様々な機能をご用意しております。"
+            />
+          </div>
         </div>
       </section>
     </div>

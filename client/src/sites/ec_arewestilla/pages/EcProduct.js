@@ -102,7 +102,14 @@ const EcProduct = () => {
         {" "}
         <div className="grid grid-cols-4 gap-4 place-items-center w-full space-y-[50px]">
           {filteredItems.map((item, index) => (
-            <MiniProductCard key={index} {...item} />
+            <div
+              onMouseEnter={() => handleMouseEnter(30)}
+              onMouseLeave={handleMouseLeave}
+              key={index}
+            >
+              {" "}
+              <MiniProductCard {...item} />
+            </div>
           ))}
         </div>
       </section>

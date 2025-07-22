@@ -49,7 +49,13 @@ const EcCart = () => {
       <div className="grid grid-cols-4 gap-4 place-items-center w-full ">
         {cart.map((item, index) => (
           <div key={index} className="flex-all-center flex-col">
-            <MiniProductCard {...item} />
+            <div
+              onMouseEnter={() => handleMouseEnter(35)}
+              onMouseLeave={handleMouseLeave}
+              key={index}
+            >
+              <MiniProductCard {...item} />
+            </div>
             <div className="flex space-x-[10px]">
               <button>
                 <img
@@ -68,6 +74,23 @@ const EcCart = () => {
             </div>
           </div>
         ))}
+      </div>{" "}
+      <div className="flex-all-center flex-col space-y-[20px] string-sm">
+        {" "}
+        <button
+          className="w-[700px] h-[50px] border border-black"
+          onMouseEnter={() => handleMouseEnter(36)}
+          onMouseLeave={handleMouseLeave}
+        >
+          Add to Cart
+        </button>{" "}
+        <button
+          onMouseEnter={() => handleMouseEnter(37)}
+          onMouseLeave={handleMouseLeave}
+          className="w-[700px] h-[50px] bg-[#40867C] text-white"
+        >
+          購入
+        </button>
       </div>
     </div>
   );

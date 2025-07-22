@@ -48,7 +48,12 @@ const EcProductDetail = () => {
     <div className="py-[100px]">
       <SectionTitle title="Online Store" />
       <section className="flex items-center justify-evenly">
-        <img src={`/${data.path}`} className="w-[700px] h-[1000px]" />
+        <img
+          onMouseEnter={() => handleMouseEnter(31)}
+          onMouseLeave={handleMouseLeave}
+          src={`/${data.path}`}
+          className="w-[700px] h-[1000px]"
+        />
         <div className="flex flex-col items-start space-y-[50px]">
           <div>
             {" "}
@@ -97,10 +102,16 @@ const EcProductDetail = () => {
             <button
               onClick={handleAdd}
               className="w-[700px] h-[50px] border border-black"
+              onMouseEnter={() => handleMouseEnter(32)}
+              onMouseLeave={handleMouseLeave}
             >
               Add to Cart
             </button>{" "}
-            <button className="w-[700px] h-[50px] bg-[#40867C] text-white">
+            <button
+              onMouseEnter={() => handleMouseEnter(33)}
+              onMouseLeave={handleMouseLeave}
+              className="w-[700px] h-[50px] bg-[#40867C] text-white"
+            >
               購入
             </button>
           </div>
@@ -108,7 +119,11 @@ const EcProductDetail = () => {
             <p> 【発送時期】</p>
             <p>入金確認後　3営業日以内</p>
           </div>
-          <button className="w-[700px] h-[50px] border border-black rounded-[10px] flex-all-center string-sm space-x-[10px]">
+          <button
+            onMouseEnter={() => handleMouseEnter(34)}
+            onMouseLeave={handleMouseLeave}
+            className="w-[700px] h-[50px] border border-black rounded-[10px] flex-all-center string-sm space-x-[10px]"
+          >
             <img className="size-[30px]" src={EcLogoImagesRoute.heart_log} />
             <p>ウォッシュリストへ追加する</p>
           </button>

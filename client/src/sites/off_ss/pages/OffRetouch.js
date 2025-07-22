@@ -41,7 +41,12 @@ const OffRetouch = () => {
           <span className="string-big">繋がる</span>
         </OffSectionTitle>
         <div className="flex items-center justify-evenly w-full">
-          <img className="w-[600px] h-[322px]" src={OffImagesRoute.img4_ss} />
+          <img
+            onMouseEnter={() => handleMouseEnter(53)}
+            onMouseLeave={handleMouseLeave}
+            className="w-[600px] h-[322px]"
+            src={OffImagesRoute.img4_ss}
+          />
           <OffMainText>
             <p>
               いつもの帰り道も、ふとした笑顔も、
