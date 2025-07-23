@@ -59,3 +59,93 @@
     opacity: 1;
   }
 }
+
+.reveal-mask {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+  mask-image: linear-gradient(to top, transparent 0%, black 100%);
+  -webkit-mask-size: 100% 300%;
+  mask-size: 100% 300%;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  transition: -webkit-mask-position 1s ease-out, mask-position 1s ease-out;
+}
+
+.reveal-mask.revealed {
+  -webkit-mask-position: top;
+  mask-position: top;
+}
+
+.img-expansion {
+  overflow: hidden;
+}
+.img-expansion img {
+  transition: transform 0.3s ease;
+}
+.img-expansion img:hover {
+  transform: scale(1.2); /* 1.2倍に拡大 */
+}
+
+.rotate-animation {
+  animation: rotate-animation 1s linear infinite;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tracked-element {
+  transition: transform 2s ease-out;
+  will-change: transform;
+}
+.tracked-element2 {
+  transition: transform 2s ease-out;
+  will-change: transform;
+}
+
+/* styles.css */
+.text-hover-lift {
+  transition: all 0.3s ease;
+}
+
+.text-hover-lift:hover {
+  letter-spacing: 1px;
+  color: #40867c;
+}
+
+.text-underline-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.text-underline-hover:hover {
+  color: white;
+}
+
+.text-underline-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #40867c;
+  transition: width 0.3s ease;
+}
+
+.text-underline-hover:hover::before {
+  width: 100%;
+}
+
+.image-follow {
+  transition: filter 1s ease;
+  filter: contrast(1) brightness(1);
+}
+
+.image-follow:hover {
+  filter: contrast(1.25) brightness(1.5);
+}

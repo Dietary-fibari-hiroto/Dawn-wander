@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { ecFirstMotion } from "../../../../shared/utils/motionConfig";
+
 const PageTitleContainer = (items) => {
   return (
     <section
@@ -7,8 +10,16 @@ const PageTitleContainer = (items) => {
       }}
     >
       <div className="absolute bottom-[10%] left-[10%]">
-        <p className="string-big">{items.title}</p>
-        <p className="string-sm">{items.subTitle}</p>
+        <div>
+          <motion.p {...ecFirstMotion} className="text-hover-lift string-big ">
+            {items.title}
+          </motion.p>
+        </div>
+        <div>
+          <motion.p {...ecFirstMotion} className="text-hover-lift string-sm">
+            {items.subTitle}
+          </motion.p>
+        </div>
       </div>
     </section>
   );

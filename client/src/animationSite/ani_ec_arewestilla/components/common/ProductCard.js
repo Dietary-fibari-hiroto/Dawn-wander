@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = (items) => {
+  const navigate = useNavigate();
   return (
     <button
+      type="button"
+      onClick={() => {
+        navigate("/ani/ec/product", { state: items });
+      }}
       className="relative w-[500px] h-[600px] flex-shrink-0"
       style={{
         background: `url(/${items.path})`,

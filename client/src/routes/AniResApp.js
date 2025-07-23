@@ -9,6 +9,7 @@ import {
   ResNewsDetail,
   ResReservation,
   ResReservationConfirm,
+  ResLoading,
 } from "../animationSite/ani_res_patisserie_dawn/pages";
 import ResHeader from "../animationSite/ani_res_patisserie_dawn/components/layout/ResHeader";
 import { ResFooter } from "../animationSite/ani_res_patisserie_dawn/components";

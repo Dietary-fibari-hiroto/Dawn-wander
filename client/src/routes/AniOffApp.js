@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { OffHome } from "../animationSite/ani_off_ss/pages";
 import { OffFooter, OffHeader } from "../animationSite/ani_off_ss/components";
@@ -27,8 +27,24 @@ const AniOffApp = () => {
       <AnimatePresence mode="wait">
         <ScrollReset />{" "}
         <Routes location={location} key={location.pathname}>
-          {RouteList.map((list, index) => (
-            <Route key={index} {...list} />
+          {RouteList.map((item, index) => (
+            <Route
+              key={index}
+              path={item.path}
+              element={
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: [0.43, 0.13, 0.23, 0.96],
+                  }}
+                >
+                  {item.element}
+                </motion.div>
+              }
+            />
           ))}
         </Routes>
       </AnimatePresence>

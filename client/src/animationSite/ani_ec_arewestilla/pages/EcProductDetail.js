@@ -48,12 +48,15 @@ const EcProductDetail = () => {
     <div className="py-[100px]">
       <SectionTitle title="Online Store" />
       <section className="flex items-center justify-evenly">
-        <img
-          onMouseEnter={() => handleMouseEnter(31)}
-          onMouseLeave={handleMouseLeave}
-          src={`/${data.path}`}
-          className="w-[700px] h-[1000px]"
-        />
+        <figure className="w-[700px] h-[1000px] img-expansion">
+          {" "}
+          <img
+            onMouseEnter={() => handleMouseEnter(31)}
+            onMouseLeave={handleMouseLeave}
+            src={`/${data.path}`}
+            className="w-full h-full "
+          />
+        </figure>
         <div className="flex flex-col items-start space-y-[50px]">
           <div>
             {" "}
@@ -75,7 +78,17 @@ const EcProductDetail = () => {
                     onChange={() => setSelectedSize(opt)}
                     className="hidden peer"
                   />
-                  <div className="w-[80px] h-[40px] border border-black flex-all-center peer-checked:bg-[#71E2D2] peer-checked:text-white peer-checked:border-none">
+                  <div
+                    className="
+        w-[80px] h-[40px] border border-black rounded-md
+        flex items-center justify-center
+        transition-all duration-300
+        peer-checked:bg-[#71E2D2] peer-checked:text-white peer-checked:border-none
+        hover:bg-[#71E2D2]/80 hover:text-white hover:border-none
+        select-none
+        user-select-none
+      "
+                  >
                     {opt}
                   </div>
                 </label>
@@ -99,18 +112,35 @@ const EcProductDetail = () => {
           </div>
           <div className="flex flex-col space-y-[20px] string-sm">
             {" "}
+            {/* Add to Cart ボタン（アウトラインタイプ） */}
             <button
               onClick={handleAdd}
-              className="w-[700px] h-[50px] border border-black"
+              className="
+    w-[700px] h-[50px] border border-black
+    bg-white text-black
+    transition-all duration-300 ease-in-out
+    hover:bg-black hover:text-white
+    hover:scale-105
+  "
               onMouseEnter={() => handleMouseEnter(32)}
               onMouseLeave={handleMouseLeave}
             >
               Add to Cart
-            </button>{" "}
+            </button>
+            {/* 購入ボタン（塗りつぶしタイプ） */}
             <button
               onMouseEnter={() => handleMouseEnter(33)}
               onMouseLeave={handleMouseLeave}
-              className="w-[700px] h-[50px] bg-[#40867C] text-white"
+              className="
+    w-[700px] h-[50px]
+    bg-[#40867C] text-white
+    rounded-md
+    shadow-md
+    transition-all duration-300 ease-in-out
+    hover:bg-[#2f635a]
+    hover:scale-105
+    active:scale-95
+  "
             >
               購入
             </button>
@@ -122,10 +152,27 @@ const EcProductDetail = () => {
           <button
             onMouseEnter={() => handleMouseEnter(34)}
             onMouseLeave={handleMouseLeave}
-            className="w-[700px] h-[50px] border border-black rounded-[10px] flex-all-center string-sm space-x-[10px]"
+            className="
+    w-[700px] h-[50px]
+    border border-black rounded-[10px]
+    flex items-center justify-center space-x-[10px]
+    string-sm
+    bg-white text-black
+    transition-all duration-300 ease-in-out
+    hover:bg-[#40867C] hover:text-white
+    hover:scale-105
+    active:scale-95
+    cursor-pointer
+  "
           >
-            <img className="size-[30px]" src={EcLogoImagesRoute.heart_log} />
-            <p>ウォッシュリストへ追加する</p>
+            <img
+              className="w-[30px] h-[30px] transition-transform duration-300 ease-in-out group-hover:scale-110"
+              src={EcLogoImagesRoute.heart_log}
+              alt="heart icon"
+            />
+            <p className="transition-colors duration-300">
+              ウォッシュリストへ追加する
+            </p>
           </button>
         </div>
       </section>

@@ -5,3 +5,4 @@ export { default as ResNews } from "./ResNews";
 export { default as ResNewsDetail } from "./ResNewsDetail";
 export { default as ResReservation } from "./ResReservation";
 export { default as ResReservationConfirm } from "./ResReservationConfirm";
+export { default as ResLoading } from "./ResLoading";

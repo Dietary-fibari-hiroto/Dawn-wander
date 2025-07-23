@@ -1,25 +1,21 @@
-import { useState, useEffect } from "react";
-import { getUsers } from "../api/users";
+import { FadeIn } from "../shared/components";
 
 const Test = () => {
-  const [data, setData] = useState();
-  useEffect(() => {
-    get();
-  }, []);
-
-  const get = async () => {
-    try {
-      const res = await getUsers();
-      if (res) {
-        setData(res);
-        console.log("res:", res);
-      }
-    } catch (error) {
-      console.log("エラー:", error);
-    }
-  };
-
-  return <div className="text-white">Test</div>;
+  return (
+    <div className="flex-all-center flex-col w-screen h-[300lvh]">
+      {" "}
+      <div class="w-24 h-24 rounded-full border-8 border-white border-t-transparent "></div>
+      <FadeIn>
+        <p className="bg-white h-[30lvh]">test</p>
+      </FadeIn>{" "}
+      <FadeIn>
+        <p className="bg-white h-[30lvh]">test</p>
+      </FadeIn>{" "}
+      <FadeIn>
+        <p className="bg-white h-[30lvh]">test</p>
+      </FadeIn>
+    </div>
+  );
 };
 
 export default Test;

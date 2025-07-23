@@ -5,7 +5,7 @@ const NewsBar = (items) => {
   const data = items;
   const handleClick = (e) => {
     e.preventDefault();
-    navigate("/res/news/detail", { state: data });
+    navigate("/ani/res/news/detail", { state: data });
   };
   return (
     <button
@@ -18,9 +18,9 @@ const NewsBar = (items) => {
           <p className="string-sm">1025.6.5{items.date}</p>
           <p className="string-sm w-[500px]">新メニュー追加！{items.title}</p>
         </div>
-        <div className="flex">
-          <img className="w-[500px] h-[300px]" src={items.img} />
-        </div>
+        <figure className="img-expansion flex w-[500px] h-[300px]">
+          <img className="w-full h-full" src={items.img} />
+        </figure>
       </div>
     </button>
   );

@@ -85,8 +85,15 @@ const EcCart = () => {
       </div>{" "}
       <div className="flex-all-center flex-col space-y-[20px] string-sm">
         {" "}
+        {/* 「買い物を続ける」ボタン（アウトラインタイプ） */}
         <button
-          className="w-[700px] h-[50px] border border-black"
+          className="
+    w-[700px] h-[50px] border border-black
+    bg-white text-black
+    transition-all duration-300 ease-in-out
+    hover:bg-black hover:text-white
+    hover:scale-105
+    "
           type="button"
           onClick={() => {
             navigate("/ec/productlist");
@@ -95,12 +102,22 @@ const EcCart = () => {
           onMouseLeave={handleMouseLeave}
         >
           買い物を続ける
-        </button>{" "}
+        </button>
+        {/* 「購入」ボタン（塗りつぶしタイプ） */}
         <button
           onClick={handleNextProccess}
           onMouseEnter={() => handleMouseEnter(37)}
           onMouseLeave={handleMouseLeave}
-          className="w-[700px] h-[50px] bg-[#40867C] text-white"
+          className="
+    w-[700px] h-[50px]
+    bg-[#40867C] text-white
+    rounded-md
+    shadow-md
+    transition-all duration-300 ease-in-out
+    hover:bg-[#2f635a]
+    hover:scale-105
+    active:scale-95
+    "
         >
           購入
         </button>

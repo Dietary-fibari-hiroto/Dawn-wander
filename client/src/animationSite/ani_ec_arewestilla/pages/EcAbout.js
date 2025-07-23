@@ -13,6 +13,10 @@ import {
   useUpdateStayDurationHandler,
 } from "../../../shared/handlers/handleSurvery.js";
 import { useSurvery } from "../../../shared/contexts/SurveryContext.js";
+import { useScrollParallax } from "../../../shared/hooks/useScrollParallax";
+import { FadeIn, UnderShow } from "../../../shared/components";
+import { ecFirstMotion } from "../../../shared/utils/motionConfig.js";
+import { motion } from "framer-motion";
 
 const pageId = 11;
 
@@ -27,6 +31,8 @@ const BrandImgList = [
   EcLogoImagesRoute.shopimage_0,
 ];
 const EcAbout = () => {
+  const { aniParallaxStyled2 } = useScrollParallax(".tracked-element2", 0.1);
+
   //ページビューの保存
   const { user_trialId } = useSurvery();
   const pageview_id = useStayDurationHandler(pageId, user_trialId);
@@ -47,7 +53,7 @@ const EcAbout = () => {
         subTitle="「Are We Still A...?」について"
       />
       <section className="relative w-screen h-[500lvh] leading-[40px]">
-        <div className="sticky top-0 flex flex-col justify-end items-center section-frame z-[3] ">
+        <div className="sticky top-0 z-[2] flex flex-col justify-end items-center section-frame z-[3] ">
           <div className="bg-white w-full h-1/3" />
         </div>
         <div className="absolute w-screen h-[500lvh] top-0 left-0 z-[1]">
@@ -155,16 +161,17 @@ const EcAbout = () => {
           <img
             onMouseEnter={() => handleMouseEnter(25)}
             onMouseLeave={handleMouseLeave}
-            className="absolute w-[700px] h-[875px] top-[9%] left-[5%]"
+            className="tracked-element2 absolute w-[700px] h-[875px] top-[9%] left-[5%]"
             src={EcImagesRoute.p438602871_345978747968461_5251680703168824051_n}
           />
-
-          <img
-            onMouseEnter={() => handleMouseEnter(27)}
-            onMouseLeave={handleMouseLeave}
-            className="size-[1000px] absolute top-[67%] left-[20%]"
-            src={EcImagesRoute.mideal2way_________________5920RD}
-          />
+          <figure className="overflow-hidden size-[1000px] absolute top-[67%] left-[20%]">
+            <img
+              onMouseEnter={() => handleMouseEnter(27)}
+              onMouseLeave={handleMouseLeave}
+              className="size-[120%] absolute  top-[-15%] tracked-element2"
+              src={EcImagesRoute.mideal2way_________________5920RD}
+            />
+          </figure>
           <div
             onMouseEnter={() => handleMouseEnter(28)}
             onMouseLeave={handleMouseLeave}
@@ -276,13 +283,15 @@ const EcAbout = () => {
         <SectionTitle title="BrandList" titleJp="取り扱いブランド" />
         <div className="grid grid-cols-4 gap-4 place-items-center w-[50%]">
           {BrandImgList.map((item, index) => (
-            <img
-              onMouseEnter={() => handleMouseEnter(29)}
-              onMouseLeave={handleMouseLeave}
-              className="size-[200px]"
-              key={index}
-              src={item}
-            />
+            <figure className="size-[200px] img-expansion">
+              <img
+                onMouseEnter={() => handleMouseEnter(29)}
+                onMouseLeave={handleMouseLeave}
+                className="w-full h-full"
+                key={index}
+                src={item}
+              />
+            </figure>
           ))}
         </div>
       </section>

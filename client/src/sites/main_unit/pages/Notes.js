@@ -36,12 +36,12 @@ const Note = () => {
     if (proccessIndex === 1) {
       //resサイトへ遷移
       trialOrder.first === 1 && navigate("/res");
-      trialOrder.first === 2 && navigate("/ani/res");
+      trialOrder.first === 2 && navigate("/ani/res/loading");
       handleUserTrial(trialOrder.first);
     } else if (proccessIndex === 2) {
       //ecサイトへ遷移
       trialOrder.second === 1 && navigate("/ec");
-      trialOrder.second === 2 && navigate("/ani/ec");
+      trialOrder.second === 2 && navigate("/ani/ec/loading");
       handleUserTrial(trialOrder.second);
     } else if (proccessIndex === 3) {
       //ssサイトへ遷移

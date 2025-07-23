@@ -44,7 +44,7 @@ const OffRetouch = () => {
           <img
             onMouseEnter={() => handleMouseEnter(53)}
             onMouseLeave={handleMouseLeave}
-            className="w-[600px] h-[322px]"
+            className="image-follow w-[600px] h-[322px]"
             src={OffImagesRoute.img4_ss}
           />
           <OffMainText>

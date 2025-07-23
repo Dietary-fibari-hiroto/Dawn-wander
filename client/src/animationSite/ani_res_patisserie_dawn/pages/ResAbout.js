@@ -9,10 +9,21 @@ import {
 } from "../../../shared/handlers/handleSurvery";
 
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
+import { FadeIn } from "../../../shared/components";
+import { useScrollParallax } from "../../../shared/hooks/useScrollParallax";
+import { motion } from "framer-motion";
+import {
+  resTopPageMotion,
+  sectionImgMotion,
+  resFirstMotion,
+} from "../../../shared/utils/motionConfig";
 
 const pageId = 3;
 
 const ResAbout = () => {
+  const { aniParallaxStyled } = useScrollParallax();
+  const { aniParallaxStyled2 } = useScrollParallax(".tracked-element2", 0.1);
+
   const { user_trialId } = useSurvery();
 
   const pageview_id = useStayDurationHandler(pageId, user_trialId);
@@ -47,23 +58,24 @@ const ResAbout = () => {
   return (
     <div className="text-white">
       <section className="relative kinuta-maruminfuji-stdn section-frame flex items-center justify-evenly text-white">
-        <div
+        <motion.div
+          {...resTopPageMotion}
           className="w-[50vw] h-screen absolute top-0 right-0 z-[-1]"
           style={{
             backgroundImage: `linear-gradient(to right,#000000,#00000055,#00000000),url(${ResImagesRoute.pexels_unkdevil_20226372})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
-        ></div>
-        <div className="text-start z-[5]">
+        />
+        <motion.div {...resFirstMotion} className="text-start z-[5]">
           <p className="string-big">About us</p>
           <p className="string-sm">私たちについて</p>
-        </div>
-        <p className="string-ss">
+        </motion.div>
+        <motion.p {...resFirstMotion} className="string-ss">
           「映画を観たあとの感動」や「夢の中のような非日常」をスイーツと空間で味わえる、
           <br />
           そういう深い没入感・余韻・現実離れした特別な体験を表現したい。
-        </p>
+        </motion.p>
       </section>
       <section
         onMouseEnter={() => handleMouseEnter(5)} // ✅ ←ここ絶対 arrow function にする！
@@ -96,32 +108,35 @@ const ResAbout = () => {
           ></div>
         </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
-          <div className="text-start ">
+          <FadeIn className="text-start ">
             <p className="string-big">Concept</p>
             <p className="string-sm">as if in a dream</p>
             <p className="string-sss">まるで映画のような空間で</p>
-          </div>
-          <p className="leading-[40px] string-s">
-            ドアを開けた瞬間、
-            <br />
-            まるで一本の映画がはじまったような、
-            <br />
-            静かで美しい物語の中へ。
-            <br />
-            Patisserie DAWMが届けるのは、
-            <br />
-            ただのデザートではありません。
-            <br />
-            感情を揺らす、ひとくちの“演出”。
-            <br />
-            日常からふっと浮かび上がるような“体験”。
-            <br />
-            味わうたび、景色が変わる。
-            <br />
-            余韻が胸に残る。
-            <br />
-            そんな特別なひとときが、ここにあります。
-          </p>
+          </FadeIn>
+          <FadeIn>
+            {" "}
+            <p className="leading-[40px] string-s">
+              ドアを開けた瞬間、
+              <br />
+              まるで一本の映画がはじまったような、
+              <br />
+              静かで美しい物語の中へ。
+              <br />
+              Patisserie DAWMが届けるのは、
+              <br />
+              ただのデザートではありません。
+              <br />
+              感情を揺らす、ひとくちの“演出”。
+              <br />
+              日常からふっと浮かび上がるような“体験”。
+              <br />
+              味わうたび、景色が変わる。
+              <br />
+              余韻が胸に残る。
+              <br />
+              そんな特別なひとときが、ここにあります。
+            </p>
+          </FadeIn>
         </div>
       </section>
       <section
@@ -155,32 +170,26 @@ const ResAbout = () => {
           ></div>
         </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
-          <div className="text-start ">
-            <p className="string-big">Concept</p>
-            <p className="string-sm">as if in a dream</p>
-            <p className="string-sss">まるで映画のような空間で</p>
-          </div>
-          <p className="leading-[40px] string-s">
-            ドアを開けた瞬間、
+          <FadeIn className="text-start ">
+            <p className="string-big">Sweets</p>
+          </FadeIn>
+          <FadeIn className="leading-[40px] string-s">
+            味覚と視覚の両面から満足いただけるよう、
             <br />
-            まるで一本の映画がはじまったような、
+            デザインと味わいに徹底的にこだわったスイーツをご提供しています。
             <br />
-            静かで美しい物語の中へ。
+            繊細な手仕事から生まれるデザートは、口に運ぶたびに異なる表情を見せ、
             <br />
-            Patisserie DAWMが届けるのは、
+            フルーツ、ショコラ、ナッツなど素材の持ち味を最大限に引き出した構成で、
             <br />
-            ただのデザートではありません。
+            どなたにもお愉しみいただけるよう豊富な種類を取り揃えております。
             <br />
-            感情を揺らす、ひとくちの“演出”。
             <br />
-            日常からふっと浮かび上がるような“体験”。
+            一皿一皿に仕込まれた、甘く静かな余韻。
             <br />
-            味わうたび、景色が変わる。
+            それは、あなたの一日を彩る小さな演出です。
             <br />
-            余韻が胸に残る。
-            <br />
-            そんな特別なひとときが、ここにあります。
-          </p>
+          </FadeIn>
         </div>
       </section>
       <section
@@ -213,36 +222,30 @@ const ResAbout = () => {
           ></div>
         </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
-          <div className="text-start ">
-            <p className="string-big">Concept</p>
-            <p className="string-sm">as if in a dream</p>
-            <p className="string-sss">まるで映画のような空間で</p>
-          </div>
-          <p className="leading-[40px] string-s">
-            ドアを開けた瞬間、
+          <FadeIn className="text-start ">
+            <p className="string-big">Wine</p>
+          </FadeIn>
+          <FadeIn className="leading-[40px] string-s">
+            お食事やスイーツとの調和を第一に、
             <br />
-            まるで一本の映画がはじまったような、
+            世界各国より選び抜かれたワインを取り寄せています。
             <br />
-            静かで美しい物語の中へ。
+            フランスやイタリアをはじめとするヨーロッパ各国の銘醸地に加え、
             <br />
-            Patisserie DAWMが届けるのは、
+            アメリカ、チリ、ドイツなど新世界と呼ばれる産地からも豊かなラインナップを揃え
+            <br />、
+            白・赤・スパークリング・ロゼ・オレンジと、多彩な味わいをご用意しております。
             <br />
-            ただのデザートではありません。
             <br />
-            感情を揺らす、ひとくちの“演出”。
+            その一杯が、今日という物語に静かな余白を残してくれますように。
             <br />
-            日常からふっと浮かび上がるような“体験”。
-            <br />
-            味わうたび、景色が変わる。
-            <br />
-            余韻が胸に残る。
-            <br />
-            そんな特別なひとときが、ここにあります。
-          </p>
+          </FadeIn>
         </div>
       </section>
       <section className="flex items-center justify-evenly section-frame">
-        <figure
+        <FadeIn
+          style={{ ...aniParallaxStyled }}
+          className="img-expansion tracked-element"
           onMouseEnter={() => handleMouseEnter(8)}
           onMouseLeave={handleMouseLeave}
         >
@@ -250,8 +253,8 @@ const ResAbout = () => {
             className="w-[500px] h-[750px]"
             src={ResImagesRoute.pexels_fotios_photos_1855214}
           />
-        </figure>
-        <div>
+        </FadeIn>
+        <FadeIn>
           <div className="p-[30px]">
             <p className="Kinuta-Shin-StdN-6K text-[#CC9600] string-md">
               Our Place
@@ -277,10 +280,10 @@ const ResAbout = () => {
             そんな体験をご用意しております。
             <br />
           </p>
-        </div>
+        </FadeIn>
       </section>
       <section className="flex items-center justify-evenly section-frame">
-        <div className="flex-1 flex flex-all-center string-ss leading-[30px]">
+        <FadeIn className="flex-1 flex flex-all-center string-ss leading-[30px]">
           店内には、2人掛け・4人掛けのテーブルをゆとりを持って配置し、
           <br />
           全36席をご用意しております。黒を基調にした内装は、モダンで静かな印象を与え、
@@ -293,14 +296,16 @@ const ResAbout = () => {
           <br />
           2人用テーブルのほか、ソファ席もあり、やわらかな風と光に包まれる心地よさを感じていただけます。
           <br />
-        </div>
-        <div className="relative flex-1 h-full">
+        </FadeIn>
+        <div className="relative flex-1 h-full ">
           <img
-            className="absolute top-0 left-[10%] z-[5] w-[400px] h-[600px]"
+            style={{ ...aniParallaxStyled }}
+            className="tracked-element absolute top-0 left-[10%] z-[5] w-[400px] h-[600px]"
             src={ResImagesRoute.dining_table_7782610_1920}
           />
           <img
-            className="absolute bottom-0 right-[20%] z-[3] w-[400px] h-[600px]"
+            style={{ ...aniParallaxStyled2 }}
+            className="tracked-element2 absolute bottom-0 right-[20%] z-[3] w-[400px] h-[600px]"
             src={ResImagesRoute.pexels_rana_aldemir_2151415483_32333615}
           />
           <div className="absolute left-0 top-[30%] size-[600px] border border-[#CC9600]"></div>
@@ -313,7 +318,8 @@ const ResAbout = () => {
           src={ResImagesRoute.raspberries_7213407_1920}
         />
         <img
-          className="absolute top-[28%] left-[15%] z-[3] w-[450px] h-[575px]"
+          style={{ ...aniParallaxStyled2 }}
+          className="tracked-element2 absolute top-[28%] left-[15%] z-[3] w-[450px] h-[575px]"
           src={ResImagesRoute.p_464893687_478738995182642_7484504265560039706_n}
         />
         <img
@@ -321,7 +327,7 @@ const ResAbout = () => {
           src={ResImagesRoute.pexels_unkdevil_20226372}
         />
         <div className="size-[300px] border border-[#CC9600] absolute top-[15%] left-[30%]"></div>
-        <div className="absolute bottom-1/2 translate-y-[50%] right-[10%] space-y-[30px]">
+        <FadeIn className="absolute bottom-1/2 translate-y-[50%] right-[10%] space-y-[30px]">
           <p className="string-md">甘さは、心に触れる。— パティシエ</p>
           <p className="string-s leading-[40px]">
             幼いころから、スイーツが誰かの心をほどく瞬間を何度も見てきました。
@@ -335,7 +341,7 @@ const ResAbout = () => {
             その想いから「Patisserie DAWM」を立ち上げました。
             <br />
           </p>
-        </div>
+        </FadeIn>
       </section>
       <section className="section-frame relative">
         <SectionTitle title="Story" titleJp="ストーリー" />
@@ -344,7 +350,8 @@ const ResAbout = () => {
           src={ResImagesRoute.pexels_rana_aldemir_2151415483_32333615}
         />
         <img
-          className="absolute top-[28%] right-[15%] z-[3] w-[450px] h-[575px]"
+          style={{ ...aniParallaxStyled2 }}
+          className="tracked-element2 absolute top-[28%] right-[15%] z-[3] w-[450px] h-[575px]"
           src={
             ResImagesRoute.p_370563396_1013176073212825_6199235972543108956_n
           }
@@ -354,7 +361,7 @@ const ResAbout = () => {
           src={ResImagesRoute.date_2211338_1920}
         />
         <div className="size-[300px] border border-[#CC9600] absolute bottom-[3%] right-[5%]"></div>
-        <div className="absolute bottom-1/2 translate-y-[50%] left-[10%] space-y-[30px]">
+        <FadeIn className="absolute bottom-1/2 translate-y-[50%] left-[10%] space-y-[30px]">
           <p className="string-md">空間は、無言の語り手。— 建築士</p>
           <p className="string-s leading-[40px]">
             わたしが設計の仕事で大切にしているのは、「人の心が、ふっとほどける瞬間」をどうつくるかということ。{" "}
@@ -368,10 +375,10 @@ const ResAbout = () => {
             席の配置や光の角度まで、甘いものがいちばん美しく見えるよう計算されています。{" "}
             <br />
           </p>
-        </div>
+        </FadeIn>
       </section>
       <section className="section-frame flex-all-center text-center leading-[40px]">
-        <div
+        <FadeIn
           onMouseEnter={() => handleMouseEnter(9)}
           onMouseLeave={handleMouseLeave}
         >
@@ -381,7 +388,7 @@ const ResAbout = () => {
           <br />
           あなたのお越しを、心よりお待ちしております。
           <br />
-        </div>
+        </FadeIn>
       </section>
       <StoreDetailes />
     </div>

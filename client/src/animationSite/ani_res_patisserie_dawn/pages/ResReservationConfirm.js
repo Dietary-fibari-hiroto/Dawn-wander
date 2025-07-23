@@ -87,11 +87,14 @@ const ResReservationConfirm = () => {
             ))}
 
             <button
+              onMouseLeave={handleNextProccess}
               type="button"
-              onClick={handleNextProccess}
-              className="relative w-[300px] h-[50px] bg-[#555555] text-white flex-all-center"
+              className="relative w-[300px] h-[50px] bg-[#555555] text-white overflow-hidden group rounded-md"
             >
-              確認
+              <span className="absolute inset-0 bg-white translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+              <span className="relative z-10 group-hover:text-[#555555] transition-colors duration-300">
+                確認
+              </span>
             </button>
           </form>
         </div>

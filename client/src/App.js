@@ -9,6 +9,8 @@ import AniOffApp from "./routes/AniOffApp";
 import Test from "./test/Test";
 import UserProvider from "./shared/contexts/UserContext";
 import SurveryProvider from "./shared/contexts/SurveryContext";
+import { ResLoading } from "./animationSite/ani_res_patisserie_dawn/pages";
+import { EcLoading } from "./animationSite/ani_ec_arewestilla/pages";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
             <Route path="/ec/*" element={<EcApp />} />
             <Route path="/res/*" element={<ResApp />} />
             <Route path="/off/*" element={<OffApp />} />
+
+            <Route path="/ani/res/loading" element={<ResLoading />} />
+            <Route path="/ani/ec/loading" element={<EcLoading />} />
 
             <Route path="/ani/res/*" element={<AniResApp />} />
             <Route path="/ani/ec/*" element={<AniEcApp />} />

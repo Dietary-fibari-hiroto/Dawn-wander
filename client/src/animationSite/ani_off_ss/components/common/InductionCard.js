@@ -4,7 +4,7 @@ import LinkButton from "./LinkButton";
 const InductionCard = () => {
   return (
     <div
-      className="w-[1000px] h-[500px] rounded-[20px] flex-all-center flex-col"
+      className="image-follow  w-[1000px] h-[500px] rounded-[20px] flex-all-center flex-col"
       style={{
         background: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(${OffImagesRoute.IMG_7028})`,
         backgroundPosition: `center`,

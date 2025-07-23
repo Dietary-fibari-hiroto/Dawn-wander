@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
   LinkButton,
   OffMainText,
@@ -12,10 +13,22 @@ import {
   useUpdateStayDurationHandler,
 } from "../../../shared/handlers/handleSurvery";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
+import { offFirstMotion } from "../../../shared/utils/motionConfig";
+import { MouseFollow } from "../../../shared/components";
 
 const pageId = 16;
 
 const OffHome = () => {
+  const [FirstProccess, setFirstProccess] = useState(0);
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const process = async () => {
+    while (FirstProccess <= 10) {
+      setFirstProccess((prev) => prev + 1);
+      await sleep(100);
+    }
+
+    console.log(FirstProccess);
+  };
   //ページビューの保存
   const { user_trialId } = useSurvery();
   const pageview_id = useStayDurationHandler(pageId, user_trialId);
@@ -38,38 +51,51 @@ const OffHome = () => {
     setFaqShow((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  useEffect(() => {
+    process();
+  }, []);
+
   return (
     <div>
       {/*Topセクション */}
       <section className="section-frame relative">
         <div className="absolute bottom-[5%] left-[3%]">
-          <img
-            onMouseEnter={() => handleMouseEnter(38)}
-            onMouseLeave={handleMouseLeave}
-            className="absolute z-[2]"
-            src={OffImagesRoute.IMG_7028}
-            style={{
-              width: "525px", // 502 * 3/4
-              height: "475px", // 460 * 3/4
-              background: "black",
-              borderRadius: `52% 48% 48% 52% / 48% 50% 50% 52%`,
-            }}
-          />
-          <div
-            className="ml-[40px] mt-[160px]"
-            style={{
-              width: "502px", // 502 * 3/4
-              height: "325.27px", // 325 * 3/4
-              background: "white",
-              borderRadius: `47% 53% 48% 52% / 42% 30% 70% 58%`,
-            }}
-          ></div>
+          {FirstProccess >= 1 && (
+            <MouseFollow amount={10}>
+              {" "}
+              <motion.img
+                {...offFirstMotion}
+                onMouseEnter={() => handleMouseEnter(38)}
+                onMouseLeave={handleMouseLeave}
+                className="absolute z-[2]"
+                src={OffImagesRoute.IMG_7028}
+                style={{
+                  width: "525px", // 502 * 3/4
+                  height: "475px", // 460 * 3/4
+                  background: "black",
+                  borderRadius: `52% 48% 48% 52% / 48% 50% 50% 52%`,
+                }}
+              />
+            </MouseFollow>
+          )}
+          {FirstProccess >= 2 && (
+            <motion.div
+              {...offFirstMotion}
+              className="ml-[40px] mt-[160px]"
+              style={{
+                width: "502px", // 502 * 3/4
+                height: "325.27px", // 325 * 3/4
+                background: "white",
+                borderRadius: `47% 53% 48% 52% / 42% 30% 70% 58%`,
+              }}
+            />
+          )}
         </div>
         <div className="absolute right-0 top-1/2 translate-y-[-50%]">
           <img
             onMouseEnter={() => handleMouseEnter(38)}
             onMouseLeave={handleMouseLeave}
-            className="absolute top-1/2 translate-y-[-50%]"
+            className="absolute top-1/2 translate-y-[-50%] z-[5] "
             src={OffImagesRoute.IMG_2847}
             style={{
               width: "785.25px", // 502 * 3/4
@@ -77,42 +103,59 @@ const OffHome = () => {
               borderRadius: `52% 48% 48% 52% / 48% 50% 50% 52% `,
             }}
           />
-          <div
-            className=""
-            style={{
-              width: "800px", // 502 * 3/4
-              height: "700px", // 460 * 3/4
-              background: "white",
-              borderRadius: `52% 48% 48% 52% / 48% 50% 50% 52% `,
-            }}
-          />
+
+          {FirstProccess >= 3 && (
+            <motion.div
+              {...offFirstMotion}
+              style={{
+                width: "800px", // 502 * 3/4
+                height: "700px", // 460 * 3/4
+                background: "white",
+                borderRadius: `52% 48% 48% 52% / 48% 50% 50% 52% `,
+              }}
+            />
+          )}
         </div>
-        <img
-          onMouseEnter={() => handleMouseEnter(38)}
-          onMouseLeave={handleMouseLeave}
-          className="absolute top-[15%] right-[35%] size-[350px] rounded-[50%]"
-          src={OffImagesRoute.IMG_28582}
-        />
+        {FirstProccess >= 4 && (
+          <motion.img
+            {...offFirstMotion}
+            onMouseEnter={() => handleMouseEnter(38)}
+            onMouseLeave={handleMouseLeave}
+            className="absolute top-[15%] right-[35%] size-[350px] rounded-[50%]"
+            src={OffImagesRoute.IMG_28582}
+          />
+        )}
         <div
           onMouseEnter={() => handleMouseEnter(39)}
           onMouseLeave={handleMouseLeave}
           className=" Ten-Mincho-Regular string-hundred absolute top-1/2 left-[20%] translate-y-[-50%] z-[3] flex flex-col"
         >
           <div className="inline-block">
-            <p>Shutter</p>
+            {FirstProccess >= 5 && (
+              <MouseFollow>
+                <motion.p {...offFirstMotion}>Shutter</motion.p>
+              </MouseFollow>
+            )}
             <div className="off-horizontal-border" />
           </div>
           <div className="inline-block ml-[100px]">
-            <p>Showcase</p>
+            {FirstProccess >= 6 && (
+              <MouseFollow>
+                <motion.p {...offFirstMotion}>Showcase</motion.p>
+              </MouseFollow>
+            )}
             <div className="off-horizontal-border" />
           </div>
         </div>
-
-        <LinkButton
-          to=""
-          label="今すぐ始める"
-          className="absolute bottom-[5%] left-[5%] z-[5]"
-        />
+        {FirstProccess >= 7 && (
+          <motion.div {...offFirstMotion}>
+            <LinkButton
+              to=""
+              label="今すぐ始める"
+              className=" absolute bottom-[5%] left-[5%] z-[10]"
+            />
+          </motion.div>
+        )}
       </section>
       <div className="relative">
         <section className="section-frame relative">
@@ -122,7 +165,7 @@ const OffHome = () => {
             className="absolute top-1/2 translate-y-[-50%] left-1/4 z-[2] translate-x-[-50%] flex string-sm tracking-[12px] space-x-[20px]"
           >
             <div className="flex space-x-[10px]">
-              <p className="vertical-text ">写真がつなぐ、</p>
+              <p className="vertical-text ">写真で繋がる、</p>
               <div className="off-vertical-border h-1/2" />
             </div>
             <div className="flex space-x-[10px]">
@@ -133,7 +176,7 @@ const OffHome = () => {
           <img
             onMouseEnter={() => handleMouseEnter(41)}
             onMouseLeave={handleMouseLeave}
-            className="w-[450px] h-[600px] absolute bottom-0 right-0 z-[2]"
+            className="image-follow w-[450px] h-[600px] absolute bottom-0 right-0 z-[2]"
             src={OffImagesRoute.IMG_2691}
           />
           <img
@@ -178,13 +221,13 @@ const OffHome = () => {
           <img
             onMouseEnter={() => handleMouseEnter(41)}
             onMouseLeave={handleMouseLeave}
-            className="w-[500px] h-[700px] absolute top-0 right-[10%]"
+            className="image-follow w-[500px] h-[700px] absolute top-0 right-[10%]"
             src={OffImagesRoute.IMG_2810}
           />
           <img
             onMouseEnter={() => handleMouseEnter(41)}
             onMouseLeave={handleMouseLeave}
-            className="absolute bottom-1/2 translate-y-1/2 left-0 w-[1000px] h-[666px]"
+            className="image-follow absolute bottom-1/2 translate-y-1/2 left-0 w-[1000px] h-[666px]"
             src={OffImagesRoute.IMG_2855}
           />
           <div className="off-vertical-border h-[300px] absolute bottom-[-15%] right-[20%] z-[3]" />
@@ -210,11 +253,11 @@ const OffHome = () => {
               className="w-[546px] h-[402px] relative"
             >
               <img
-                className="size-[300px] absolute top-0 left-0"
+                className="image-follow size-[300px] absolute top-0 left-0"
                 src={OffImagesRoute.img2_ss}
               />
               <img
-                className="size-[300px] absolute bottom-0 right-0"
+                className="image-follow size-[300px] absolute bottom-0 right-0"
                 src={OffImagesRoute.img1_ss}
               />
             </figure>
@@ -261,7 +304,7 @@ const OffHome = () => {
             <img
               onMouseEnter={() => handleMouseEnter(42)}
               onMouseLeave={handleMouseLeave}
-              className="size-[500px]"
+              className="image-follow size-[500px]"
               src={OffImagesRoute.IMG_3423}
             />
           </div>
@@ -277,7 +320,7 @@ const OffHome = () => {
             <img
               onMouseEnter={() => handleMouseEnter(42)}
               onMouseLeave={handleMouseLeave}
-              className="w-[600px] h-[400px]"
+              className="image-follow w-[600px] h-[400px]"
               src={OffImagesRoute.img3_ss}
             />
             <div
@@ -321,7 +364,7 @@ const OffHome = () => {
           <img
             onMouseEnter={() => handleMouseEnter(44)}
             onMouseLeave={handleMouseLeave}
-            className="w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] right-[15%]"
+            className="image-follow w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] right-[15%]"
             src={OffImagesRoute.retoutch_img}
           />
         </section>
@@ -340,7 +383,7 @@ const OffHome = () => {
           <img
             onMouseEnter={() => handleMouseEnter(46)}
             onMouseLeave={handleMouseLeave}
-            className="w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] left-[15%]"
+            className="image-follow w-[1000px] h-[560px] rounded-[50px] absolute top-1/2 translate-y-[-50%] left-[15%]"
             src={OffImagesRoute.ins}
           />
         </section>

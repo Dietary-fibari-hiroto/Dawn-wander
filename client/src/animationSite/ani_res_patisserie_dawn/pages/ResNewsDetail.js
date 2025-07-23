@@ -35,16 +35,18 @@ const ResNewsDetail = () => {
         <SectionTitle title={data.date} titleJp={data.title} />
       </div>
       <div className="flex-all-center flex-col space-y-[100px] py-[100px]">
-        <img
-          onMouseEnter={() => handleMouseEnter(12)}
-          onMouseLeave={handleMouseLeave}
-          className="w-[1000px] h-[600px]"
-          src={data.img}
-        />
+        <figure className="w-[1000px] h-[600px] img-expansion">
+          <img
+            onMouseEnter={() => handleMouseEnter(12)}
+            onMouseLeave={handleMouseLeave}
+            className="w-full h-full "
+            src={data.img}
+          />
+        </figure>
         <p className="w-[700px] h-auto " style={{ whiteSpace: "pre-line" }}>
           {data.text}
         </p>
-        <Link to="/res/news" className="underline string-md">
+        <Link to="/ani/res/news" className="underline string-md">
           News一覧へ戻る
         </Link>
       </div>
