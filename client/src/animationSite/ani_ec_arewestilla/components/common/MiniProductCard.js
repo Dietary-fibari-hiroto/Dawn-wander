@@ -6,7 +6,7 @@ const MiniProductCard = (items) => {
   const handleClick = () => {
     console.log("sending:", data);
     localStorage.setItem("latestData", JSON.stringify(data));
-    navigate("/ec/product", { state: data });
+    navigate("/ani/ec/product", { state: data });
   };
   return (
     <button

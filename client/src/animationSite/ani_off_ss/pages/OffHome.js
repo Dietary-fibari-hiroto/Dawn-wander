@@ -14,11 +14,20 @@ import {
 } from "../../../shared/handlers/handleSurvery";
 import { useSurvery } from "../../../shared/contexts/SurveryContext";
 import { offFirstMotion } from "../../../shared/utils/motionConfig";
-import { MouseFollow } from "../../../shared/components";
+import {
+  FadeIn,
+  FadeInUp,
+  MouseFollow,
+  SideShow,
+} from "../../../shared/components";
+import { useScrollParallax } from "../../../shared/hooks/useScrollParallax";
 
 const pageId = 16;
 
 const OffHome = () => {
+  const { aniParallaxStyled } = useScrollParallax();
+  const { aniParallaxStyled2 } = useScrollParallax(".tracked-element2", 0.1);
+
   const [FirstProccess, setFirstProccess] = useState(0);
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const process = async () => {
@@ -164,23 +173,23 @@ const OffHome = () => {
             onMouseLeave={handleMouseLeave}
             className="absolute top-1/2 translate-y-[-50%] left-1/4 z-[2] translate-x-[-50%] flex string-sm tracking-[12px] space-x-[20px]"
           >
-            <div className="flex space-x-[10px]">
+            <SideShow key="s1" className="flex space-x-[10px]">
               <p className="vertical-text ">写真で繋がる、</p>
               <div className="off-vertical-border h-1/2" />
-            </div>
-            <div className="flex space-x-[10px]">
+            </SideShow>
+            <SideShow key="s2" className="flex space-x-[10px]">
               <p className="vertical-text ">わたしと誰かのストーリー。</p>{" "}
               <div className="off-vertical-border " />
-            </div>
+            </SideShow>
           </div>
           <img
             onMouseEnter={() => handleMouseEnter(41)}
             onMouseLeave={handleMouseLeave}
-            className="image-follow w-[450px] h-[600px] absolute bottom-0 right-0 z-[2]"
+            className=" image-follow w-[450px] h-[600px] absolute bottom-0 right-0 z-[2]"
             src={OffImagesRoute.IMG_2691}
           />
           <img
-            className="size-[1080px] absolute top-[5%] right-[10%] "
+            className="tracked-element2 size-[1080px] absolute top-[5%] right-[10%] "
             src={OffImagesRoute.camera_art3}
           />
         </section>
@@ -191,11 +200,11 @@ const OffHome = () => {
           </OffSectionTitle>
           <div className="flex items-center justify-evenly">
             <img
-              className="art-set size-[705px] rotate-[30deg]"
+              className="tracked-element2 art-set size-[705px] rotate-[30deg]"
               src={OffImagesRoute.phone_art}
             />
             <div className="space-y-[15px]">
-              <p className="string-sm leading-[30px]">
+              <FadeIn className="string-sm leading-[30px]">
                 ShutterShowcaseは、カメラマン・被写体・写真好きな人たちが、
                 <br />
                 自分の写真でつながれるポートフォリオ&マッチングプラットフォームです。
@@ -212,7 +221,7 @@ const OffHome = () => {
                 <br /> <br />
                 写真でつながるすべての人の居場所です。
                 <br />
-              </p>
+              </FadeIn>
               <div className="off-horizontal-border" />
             </div>
           </div>
@@ -230,7 +239,7 @@ const OffHome = () => {
             className="image-follow absolute bottom-1/2 translate-y-1/2 left-0 w-[1000px] h-[666px]"
             src={OffImagesRoute.IMG_2855}
           />
-          <div className="off-vertical-border h-[300px] absolute bottom-[-15%] right-[20%] z-[3]" />
+          <div className="tracked-element2 off-vertical-border h-[300px] absolute bottom-[-15%] right-[20%] z-[3]" />
         </section>
       </div>
       {/*機能紹介部分 */}
@@ -345,7 +354,7 @@ const OffHome = () => {
               </OffMainText>
             </div>
           </div>
-          <div className="off-vertical-border h-[300px] absolute bottom-[-15%] left-[20%]" />
+          <div className="tracked-element off-vertical-border h-[300px] absolute bottom-[-15%] left-[20%]" />
         </section>
       </div>
       <div>

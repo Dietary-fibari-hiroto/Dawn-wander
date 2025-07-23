@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { resTopPageMotion } from "../../../../shared/utils/motionConfig";
+
 const TopSection = (props) => {
   return (
     <section
@@ -8,7 +11,9 @@ const TopSection = (props) => {
         backgroundSize: "cover",
       }}
     >
-      <p className="string-sm">{props.title}</p>
+      <motion.p {...resTopPageMotion} className="string-sm">
+        {props.title}
+      </motion.p>
     </section>
   );
 };

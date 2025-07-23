@@ -16,19 +16,22 @@ const OffFooter = () => {
           <img className="section-frame" src={img} />
         ))}
       </div>
-      <p className="absolute bottom-0 w-full text-center p-[10px] string-sm">
+      <p className="absolute bottom-0 w-full text-center p-[10px] string-sm transition-all duration-500 ease-in-out hover:opacity-70 hover:text-[#ccc]">
         Copyright 2025 - Dawn. All Rights Reserved.
       </p>
       <div className="absolute z-[3] top-[50%] translate-y-[-50%] left-[5%] flex-all-center flex-col space-y-[30px]">
-        <div className=" flex string-sm tracking-[12px] space-x-[20px]">
-          {" "}
+        <div className="flex string-sm tracking-[12px] space-x-[20px]">
           <div className="flex space-x-[10px]">
-            <p className="vertical-text ">写真がつなぐ、</p>
-            <div className="off-vertical-border h-1/2" />
+            <p className="vertical-text transition-all duration-300 ease-in-out hover:-translate-y-1 hover:opacity-80">
+              写真がつなぐ、
+            </p>
+            <div className="off-vertical-border h-1/2 transition-all duration-300 ease-in-out hover:h-[60%] hover:bg-[#40867c]" />
           </div>
           <div className="flex space-x-[10px]">
-            <p className="vertical-text ">わたしと誰かのストーリー。</p>{" "}
-            <div className="off-vertical-border " />
+            <p className="vertical-text transition-all duration-300 ease-in-out hover:-translate-y-1 hover:opacity-80">
+              わたしと誰かのストーリー。
+            </p>
+            <div className="off-vertical-border transition-all duration-300 ease-in-out hover:h-[60%] hover:bg-[#40867c]" />
           </div>
         </div>
         <LinkButton to="" label="ログイン..." />

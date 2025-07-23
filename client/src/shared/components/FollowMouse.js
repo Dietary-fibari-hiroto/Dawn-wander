@@ -3,6 +3,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef } from "react";
 
 export default function MouseFollow({
+  className,
   children,
   amount = 10,
   stiffness = 100,
@@ -33,6 +34,7 @@ export default function MouseFollow({
 
   return (
     <motion.div
+      className={`${className}`}
       ref={containerRef}
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}

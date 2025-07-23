@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 
 const FadeIn = ({ children, className }) => {
-  const { ref, isInView } = useInView();
+  const { ref, isInView } = useInView(0.3);
 
   return (
     <motion.div

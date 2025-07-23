@@ -11,10 +11,8 @@ const imageList = [
 const OffFooter = () => {
   return (
     <footer className="relative section-frame overflow-x-hidden whitespace-nowrap bg-black">
-      <div className="w-max slider flex opacity-[0.75]">
-        {imageList.map((img, index) => (
-          <img className="section-frame" src={img} />
-        ))}
+      <div className="flex opacity-[0.75]">
+        <img className="section-frame" src={OffImagesRoute.IMG_2763} />
       </div>
       <p className="absolute bottom-0 w-full text-center p-[10px] string-sm">
         Copyright 2025 - Dawn. All Rights Reserved.

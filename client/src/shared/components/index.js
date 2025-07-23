@@ -8,3 +8,4 @@ export { default as FadeOut } from "./FadeOut";
 export { default as ImgExpansionFadeIn } from "./ImgExpansionFadeIn";
 export { default as UnderShow } from "./UnderShow";
 export { default as MouseFollow } from "./FollowMouse";
+export { default as SideShow } from "./SideShow";

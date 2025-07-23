@@ -68,7 +68,7 @@ const ResAbout = () => {
       <section
         onMouseEnter={() => handleMouseEnter(5)} // ✅ ←ここ絶対 arrow function にする！
         onMouseLeave={handleMouseLeave}
-        className="relative w-full h-[300lvh] scroll-target"
+        className="relative w-full h-[200lvh] scroll-target"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.city_7459162_1920})`,
           backgroundSize: "cover",
@@ -76,25 +76,6 @@ const ResAbout = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="sticky top-0 section-frame">
-          <div
-            className="relative"
-            style={{
-              zIndex: 5,
-              width: "150vw",
-              height: "100vh",
-              left: "0",
-              background: "black",
-              maskImage: `radial-gradient(circle at center, transparent ${circleValue}px, black ${
-                circleValue + 1
-              }px)`,
-              WebkitMaskImage: `radial-gradient(circle at center, transparent ${circleValue}px, black ${
-                circleValue + 1
-              }px)`,
-              transition: "all 2s ease-in-out",
-            }}
-          ></div>
-        </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
           <div className="text-start ">
             <p className="string-big">Concept</p>
@@ -127,7 +108,7 @@ const ResAbout = () => {
       <section
         onMouseEnter={() => handleMouseEnter(6)} // ✅ ←ここ絶対 arrow function にする！
         onMouseLeave={handleMouseLeave}
-        className="relative w-full h-[300lvh] scroll-target2"
+        className="relative w-full h-[200lvh] scroll-target2"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.pexels_eva_bronzini_6811161})`,
           backgroundSize: "cover",
@@ -135,25 +116,6 @@ const ResAbout = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="sticky top-0 section-frame">
-          <div
-            className="relative absolute"
-            style={{
-              zIndex: 5,
-              width: "150vw",
-              height: "100vh",
-              left: "-50%",
-              background: "black",
-              maskImage: `radial-gradient(circle at center, transparent ${circleValue2}px, black ${
-                circleValue2 + 1
-              }px)`,
-              WebkitMaskImage: `radial-gradient(circle at center, transparent ${circleValue2}px, black ${
-                circleValue2 + 1
-              }px)`,
-              transition: "all 2s ease-in-out",
-            }}
-          ></div>
-        </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
           <div className="text-start ">
             <p className="string-big">Concept</p>
@@ -186,7 +148,7 @@ const ResAbout = () => {
       <section
         onMouseEnter={() => handleMouseEnter(7)} // ✅ ←ここ絶対 arrow function にする！
         onMouseLeave={handleMouseLeave}
-        className="relative w-full h-[300lvh] scroll-target3"
+        className="relative w-full h-[200lvh] scroll-target3"
         style={{
           backgroundImage: `linear-gradient(#00000066),url(${ResImagesRoute.t_ed_hOgog7l_iuY_unsplash})`,
           backgroundSize: "cover",
@@ -194,24 +156,6 @@ const ResAbout = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="sticky top-0 section-frame">
-          <div
-            className="relative"
-            style={{
-              zIndex: 5,
-              width: "100vw",
-              height: "100vh",
-              background: "black",
-              maskImage: `radial-gradient(circle at center, transparent ${circleValue3}px, black ${
-                circleValue3 + 1
-              }px)`,
-              WebkitMaskImage: `radial-gradient(circle at center, transparent ${circleValue3}px, black ${
-                circleValue3 + 1
-              }px)`,
-              transition: "all 2s ease-in-out",
-            }}
-          ></div>
-        </div>
         <div className="sticky top-0 left-0 section-frame flex items-center justify-around">
           <div className="text-start ">
             <p className="string-big">Concept</p>

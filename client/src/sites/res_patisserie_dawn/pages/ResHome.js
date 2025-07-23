@@ -46,10 +46,10 @@ const ResHome = () => {
           className="w-[100vw] h-[100vh] sticky top-0 z-1 transition-all duration-300 ease-in-out"
           style={{ filter: `blur(${blurAmount * (animateThreshold * 80)}px)` }}
         >
-          <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-            <ambientLight intensity={2} />
-            <FlutteringCloth />
-          </Canvas>
+          <img
+            className="section-frame opacity-[0.8]"
+            src={ResImagesRoute.table_5356682_1920}
+          />
         </div>
 
         <div

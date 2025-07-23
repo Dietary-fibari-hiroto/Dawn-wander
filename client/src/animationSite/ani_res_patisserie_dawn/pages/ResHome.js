@@ -134,7 +134,7 @@ const ResHome = () => {
         </section>
       </div>
       <section className="relative w-full h-[500lvh]">
-        <FadeOut>
+        <FadeOut key="ani1">
           <img
             style={{ ...aniParallaxStyled }}
             className="tracked-element absolute w-[750px] h-[500px] top-[13%] left-[11%]"
@@ -143,7 +143,7 @@ const ResHome = () => {
             onMouseLeave={handleMouseLeave}
           />
         </FadeOut>
-        <FadeOut>
+        <FadeOut key="ani2">
           <img
             style={{ ...aniParallaxStyled2 }}
             onMouseEnter={() => handleMouseEnter(2)}
@@ -166,7 +166,7 @@ const ResHome = () => {
           className="absolute  w-[450px] h-[300px] top-[44%] left-[42%]"
           src={ResImagesRoute.pexels_pavel_danilyuk_6405650}
         />
-        <FadeOut>
+        <FadeOut key="ani3">
           <img
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
