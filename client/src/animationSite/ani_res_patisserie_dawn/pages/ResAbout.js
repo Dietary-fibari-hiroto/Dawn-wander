@@ -320,7 +320,7 @@ const ResAbout = () => {
         <img
           style={{ ...aniParallaxStyled2 }}
           className="tracked-element2 absolute top-[28%] left-[15%] z-[3] w-[450px] h-[575px]"
-          src={ResImagesRoute.p_464893687_478738995182642_7484504265560039706_n}
+          src={ResImagesRoute.p521965325_729532123179058_6308839584991205030_n}
         />
         <img
           className="absolute bottom-[3%] left-[32%]  w-[300px] h-[400px] opacity-[0.6]"
@@ -352,9 +352,7 @@ const ResAbout = () => {
         <img
           style={{ ...aniParallaxStyled2 }}
           className="tracked-element2 absolute top-[28%] right-[15%] z-[3] w-[450px] h-[575px]"
-          src={
-            ResImagesRoute.p_370563396_1013176073212825_6199235972543108956_n
-          }
+          src={ResImagesRoute.p521362835_729671186349430_3935841744942998295_n}
         />
         <img
           className="absolute bottom-[3%] right-[32%]  w-[300px] h-[400px] opacity-[0.6]"

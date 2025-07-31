@@ -83,6 +83,8 @@ const ResImagesRoute = {
   char: require("./logos/char.png"),
   clock: require("./logos/clock.png"),
   user: require("./logos/user.png"),
+  p521362835_729671186349430_3935841744942998295_n: require("./photos/p521362835_729671186349430_3935841744942998295_n.jpg"),
+  p521102805_1113710563994393_7110010474911138197_n: require("./photos/p521102805_1113710563994393_7110010474911138197_n.jpg"),
 };
 
 export default ResImagesRoute;

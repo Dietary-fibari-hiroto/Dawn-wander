@@ -118,5 +118,3 @@ INSERT INTO surveys(title,description) VALUES,
 ("アニメーションなし試行後アンケ―ド","施行後の意識調査アンケート"),
 ("アニメーションあり試行後アンケ―ド","施行後の意識調査アンケート");
 
-INSERT INTO questions(survey_id,question_text,question_type) VALUES,
-("1")

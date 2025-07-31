@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EcApp from "./routes/EcApp";
 import MainUnitApp from "./routes/MainUnitApp";
 import ResApp from "./routes/ResApp";
@@ -16,7 +16,7 @@ function App() {
   return (
     <UserProvider>
       <SurveryProvider>
-        <BrowserRouter>
+        <Router>
           <Routes>
             <Route path="/*" element={<MainUnitApp />} />
             <Route path="/ec/*" element={<EcApp />} />
@@ -32,7 +32,7 @@ function App() {
 
             <Route path="/test" element={<Test />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </SurveryProvider>
     </UserProvider>
   );
